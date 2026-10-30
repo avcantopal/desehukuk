@@ -4,7 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
-<title>DESE Hukuk – Önizleme</title>
+<title>DESE Hukuk – Avukatlık ve Hukuki Danışmanlık</title>
+<meta name="description" content="DESE Hukuk – İstanbul Bağcılar'da ceza hukuku, denizcilik ve gemi adamı hukuku, iş hukuku, icra-iflas, gayrimenkul, aile ve ticaret hukuku alanlarında avukatlık ve hukuki danışmanlık.">
+<link rel="canonical" href="https://desehukuk.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://desehukuk.com/">
+<meta property="og:title" content="DESE Hukuk – Avukatlık ve Hukuki Danışmanlık">
+<meta property="og:description" content="Ceza, denizcilik, iş, icra-iflas, gayrimenkul, aile ve ticaret hukuku alanlarında avukatlık ve danışmanlık. Bağcılar / İstanbul.">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%230f2240'/%3E%3Cpath d='M20 8v24M12 14h16M12 14l-4 9h8l-4-9zM28 14l-4 9h8l-4-9zM14 32h12' stroke='%23d6b483' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LegalService",
+  "name":"DESE Hukuk",
+  "url":"https://desehukuk.com/",
+  "email":"cantopal@deselaw.com",
+  "telephone":"+90 506 493 35 73",
+  "address":{"@type":"PostalAddress","streetAddress":"Mahmutbey Mah. Taşocağı Yolu Cad. No:3, Ağaoğlu My Office 212, B Blok Kat:19 D:319","addressLocality":"Bağcılar","addressRegion":"İstanbul","postalCode":"34400","addressCountry":"TR"},
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}],
+  "areaServed":"İstanbul",
+  "knowsAbout":["Ceza Hukuku","Denizcilik Hukuku","İş Hukuku","İcra ve İflas Hukuku","Gayrimenkul Hukuku","Aile Hukuku","Ticaret Hukuku","Tüketici Hukuku"],
+  "employee":{"@type":"Person","name":"Av. Ali Can Topal","jobTitle":"Avukat","memberOf":{"@type":"Organization","name":"İstanbul Barosu"}}
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -111,6 +135,13 @@ form textarea{min-height:90px;resize:vertical}
 .note{font-size:12px;opacity:.6;margin-top:14px}
 .ok{display:none;color:var(--gold2);font-size:14px;margin-top:12px}
 
+.lang button{background:none;border:0;color:inherit;font:inherit;cursor:pointer;opacity:.6;padding:0 2px}
+.lang button.on{opacity:1;color:var(--gold2);font-weight:600}
+.lang.m{display:inline-block;margin:14px 0 0;align-self:flex-start;color:#fff}
+.mapbox{margin-top:26px;border:1px solid rgba(255,255,255,.12)}
+.mapbox iframe{display:block;width:100%;height:260px;border:0;filter:grayscale(.3)}
+.dir{display:block;padding:12px 16px;font-size:14px;color:var(--gold2);background:rgba(255,255,255,.04)}
+.dir:hover{color:#fff}
 .wa{position:fixed;right:18px;bottom:18px;z-index:30;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}
 .wa:hover{transform:scale(1.06)}
 footer{background:#0a1830;color:rgba(255,255,255,.6);font-size:13px;padding:30px 0}
@@ -141,32 +172,33 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <div><b>DESE</b><small>HUKUK</small></div>
     </a>
     <nav class="links">
-      <a href="#hakkimizda">Hakkımızda</a>
-      <a href="#alanlar">Çalışma Alanları</a>
-      <a href="#makaleler">Makaleler</a>
-      <a href="#iletisim">İletişim</a>
-      <span class="lang">TR | EN</span>
+      <a href="#hakkimizda"><span class="t" data-en="About">Hakkımızda</span></a>
+      <a href="#alanlar"><span class="t" data-en="Practice Areas">Çalışma Alanları</span></a>
+      <a href="#makaleler"><span class="t" data-en="Articles">Makaleler</span></a>
+      <a href="#iletisim"><span class="t" data-en="Contact">İletişim</span></a>
+      <span class="lang"><button type="button" data-l="tr">TR</button> | <button type="button" data-l="en">EN</button></span>
     </nav>
     <button class="burger" aria-label="Menü" onclick="document.getElementById('m').classList.toggle('open')">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
   </div>
   <div class="mobile" id="m" onclick="this.classList.remove('open')">
-    <a href="#hakkimizda">Hakkımızda</a>
-    <a href="#alanlar">Çalışma Alanları</a>
-    <a href="#makaleler">Makaleler</a>
-    <a href="#iletisim">İletişim</a>
+    <a href="#hakkimizda"><span class="t" data-en="About">Hakkımızda</span></a>
+    <a href="#alanlar"><span class="t" data-en="Practice Areas">Çalışma Alanları</span></a>
+    <a href="#makaleler"><span class="t" data-en="Articles">Makaleler</span></a>
+    <a href="#iletisim"><span class="t" data-en="Contact">İletişim</span></a>
+    <span class="lang m"><button type="button" data-l="tr">TR</button> | <button type="button" data-l="en">EN</button></span>
   </div>
 </header>
 
 <div class="hero" id="top">
   <div class="wrap">
-    <div class="eyebrow">Avukatlık ve Hukuki Danışmanlık · İstanbul</div>
-    <h1>Hukuki süreçlerinizde <em>yanınızdayız.</em></h1>
-    <p>Ceza hukukundan denizcilik hukukuna, iş uyuşmazlıklarından icra takiplerine kadar her aşamada titiz ve şeffaf bir hukuki destek sunuyoruz.</p>
+    <div class="eyebrow"><span class="t" data-en="Legal Representation &amp; Advisory · Istanbul">Avukatlık ve Hukuki Danışmanlık · İstanbul</span></div>
+    <h1><span class="t" data-en="By your side through &lt;em&gt;every legal step.&lt;/em&gt;">Hukuki süreçlerinizde <em>yanınızdayız.</em></span></h1>
+    <p><span class="t" data-en="From criminal law to maritime law, from employment disputes to enforcement proceedings, we provide careful and transparent legal support at every stage.">Ceza hukukundan denizcilik hukukuna, iş uyuşmazlıklarından icra takiplerine kadar her aşamada titiz ve şeffaf bir hukuki destek sunuyoruz.</span></p>
     <div class="btns">
-      <a href="#iletisim" class="btn gold">İletişime Geçin</a>
-      <a href="#alanlar" class="btn ghost">Çalışma Alanları</a>
+      <a href="#iletisim" class="btn gold"><span class="t" data-en="Get in Touch">İletişime Geçin</span></a>
+      <a href="#alanlar" class="btn ghost"><span class="t" data-en="Practice Areas">Çalışma Alanları</span></a>
     </div>
   </div>
   <svg class="waves" viewBox="0 0 600 300" fill="none" stroke="#fff" stroke-width="1.2">
@@ -179,25 +211,25 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <div class="strip">
   <div class="wrap">
-    <div><b>Dava Takibi</b><span>İlk derece, istinaf ve Yargıtay</span></div>
-    <div><b>Danışmanlık</b><span>Sözleşme ve uyum süreçleri</span></div>
-    <div><b>Arabuluculuk</b><span>Dava öncesi çözüm süreçleri</span></div>
+    <div><b><span class="t" data-en="Litigation">Dava Takibi</span></b><span><span class="t" data-en="First instance, appeal and Court of Cassation">İlk derece, istinaf ve Yargıtay</span></span></div>
+    <div><b><span class="t" data-en="Advisory">Danışmanlık</span></b><span><span class="t" data-en="Contracts and compliance">Sözleşme ve uyum süreçleri</span></span></div>
+    <div><b><span class="t" data-en="Mediation">Arabuluculuk</span></b><span><span class="t" data-en="Pre-litigation dispute resolution">Dava öncesi çözüm süreçleri</span></span></div>
   </div>
 </div>
 
 <section id="hakkimizda">
   <div class="wrap about">
     <div>
-      <div class="eyebrow">Hakkımızda</div>
-      <h2 style="font-size:clamp(32px,4.4vw,46px);color:var(--navy);margin:10px 0 22px">Dosyanızın her aşamasını birlikte takip ediyoruz</h2>
-      <p>DESE Hukuk; bireylere ve şirketlere ceza, iş, denizcilik, icra-iflas ve ticaret hukuku başta olmak üzere geniş bir alanda avukatlık ve danışmanlık hizmeti vermektedir.</p>
-      <p>Her dosyada müvekkilin süreç hakkında açık ve düzenli bilgilendirilmesini, hukuki risklerin baştan değerlendirilmesini esas alıyoruz.</p>
+      <div class="eyebrow"><span class="t" data-en="About">Hakkımızda</span></div>
+      <h2 style="font-size:clamp(32px,4.4vw,46px);color:var(--navy);margin:10px 0 22px"><span class="t" data-en="We follow every stage of your case with you">Dosyanızın her aşamasını birlikte takip ediyoruz</span></h2>
+      <p><span class="t" data-en="DESE Hukuk provides legal representation and advisory services to individuals and companies across a broad range of fields, in particular criminal, employment, maritime, enforcement and insolvency, and commercial law.">DESE Hukuk; bireylere ve şirketlere ceza, iş, denizcilik, icra-iflas ve ticaret hukuku başta olmak üzere geniş bir alanda avukatlık ve danışmanlık hizmeti vermektedir.</span></p>
+      <p><span class="t" data-en="In every matter, we keep our clients clearly and regularly informed and assess legal risks from the outset.">Her dosyada müvekkilin süreç hakkında açık ve düzenli bilgilendirilmesini, hukuki risklerin baştan değerlendirilmesini esas alıyoruz.</span></p>
     </div>
     <div class="card-person">
       <div class="avatar">AT</div>
       <h3>Av. Ali Can Topal</h3>
-      <div class="role">Avukat · İstanbul Barosu</div>
-      <p>Ceza hukuku, iş hukuku ve denizcilik hukuku alanlarında dava ve danışmanlık hizmeti vermektedir. Gemi adamı uyuşmazlıkları, crew management sözleşmeleri ve ceza yargılaması süreçlerinde aktif olarak çalışmaktadır.</p>
+      <div class="role"><span class="t" data-en="Attorney at Law · Istanbul Bar Association">Avukat · İstanbul Barosu</span></div>
+      <p><span class="t" data-en="Practises litigation and advisory work in criminal, employment and maritime law, with active involvement in seafarer disputes, crew management agreements and criminal proceedings.">Ceza hukuku, iş hukuku ve denizcilik hukuku alanlarında dava ve danışmanlık hizmeti vermektedir. Gemi adamı uyuşmazlıkları, crew management sözleşmeleri ve ceza yargılaması süreçlerinde aktif olarak çalışmaktadır.</span></p>
     </div>
   </div>
 </section>
@@ -205,19 +237,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <section class="areas" id="alanlar">
   <div class="wrap">
     <div class="head">
-      <div class="eyebrow">Çalışma Alanları</div>
-      <h2>Hukukun her alanında destek</h2>
-      <p>Aşağıdaki alanlarda dava takibi ve hukuki danışmanlık hizmeti verilmektedir.</p>
+      <div class="eyebrow"><span class="t" data-en="Practice Areas">Çalışma Alanları</span></div>
+      <h2><span class="t" data-en="Support across all areas of law">Hukukun her alanında destek</span></h2>
+      <p><span class="t" data-en="We provide litigation and legal advisory services in the following areas.">Aşağıdaki alanlarda dava takibi ve hukuki danışmanlık hizmeti verilmektedir.</span></p>
     </div>
     <div class="grid">
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M5 7h14M5 7l-3 7h6l-3-7zM19 7l-3 7h6l-3-7z"/></svg><h3>Ceza Hukuku</h3><p>Soruşturma ve kovuşturma aşamalarında müdafilik, tutukluluğa itiraz, katılan vekilliği.</p></div>
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 18c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0M5 15l2-7h10l2 7M12 3v5"/></svg><h3>Denizcilik Hukuku</h3><p>Gemi adamı alacakları, crew management ve manning sözleşmeleri, armatör uyuşmazlıkları.</p></div>
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V4h8v3"/></svg><h3>İş Hukuku</h3><p>İşçi alacakları, işe iade, kıdem ve ihbar tazminatı, zorunlu arabuluculuk.</p></div>
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20h16M6 20V10M10 20V10M14 20V10M18 20V10M3 10l9-6 9 6"/></svg><h3>İcra ve İflas</h3><p>İlamlı ve ilamsız takipler, haciz işlemleri, itirazın iptali ve kaldırılması.</p></div>
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg><h3>Gayrimenkul</h3><p>Tapu iptal ve tescil, ortaklığın giderilmesi, kira ve tahliye davaları.</p></div>
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5M12 20c0-3 2-5 4-5s6 2 6 5"/></svg><h3>Aile Hukuku</h3><p>Boşanma, velayet, nafaka ve mal rejimi uyuşmazlıkları.</p></div>
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4M10 12h6M10 16h6"/></svg><h3>Ticaret ve Sözleşmeler</h3><p>Sözleşme hazırlama ve inceleme, şirket danışmanlığı, KVKK uyum süreçleri.</p></div>
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4h2l2 12h11l2-8H6"/><circle cx="9" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg><h3>Tüketici Hukuku</h3><p>Ayıplı mal ve hizmet, cayma hakkı, tüketici hakem heyeti başvuruları.</p></div>
+      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M5 7h14M5 7l-3 7h6l-3-7zM19 7l-3 7h6l-3-7z"/></svg><h3><span class="t" data-en="Criminal Law">Ceza Hukuku</span></h3><p><span class="t" data-en="Defence at investigation and trial stages, challenges to pre-trial detention, representation of complainants.">Soruşturma ve kovuşturma aşamalarında müdafilik, tutukluluğa itiraz, katılan vekilliği.</span></p></div>
+      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 18c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0M5 15l2-7h10l2 7M12 3v5"/></svg><h3><span class="t" data-en="Maritime Law">Denizcilik Hukuku</span></h3><p><span class="t" data-en="Seafarer claims, crew management and manning agreements, shipowner disputes.">Gemi adamı alacakları, crew management ve manning sözleşmeleri, armatör uyuşmazlıkları.</span></p></div>
+      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V4h8v3"/></svg><h3><span class="t" data-en="Employment Law">İş Hukuku</span></h3><p><span class="t" data-en="Employee receivables, reinstatement, severance and notice pay, mandatory mediation.">İşçi alacakları, işe iade, kıdem ve ihbar tazminatı, zorunlu arabuluculuk.</span></p></div>
+      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20h16M6 20V10M10 20V10M14 20V10M18 20V10M3 10l9-6 9 6"/></svg><h3><span class="t" data-en="Enforcement &amp; Insolvency">İcra ve İflas</span></h3><p><span class="t" data-en="Judgment and non-judgment enforcement, attachments, annulment and removal of objections.">İlamlı ve ilamsız takipler, haciz işlemleri, itirazın iptali ve kaldırılması.</span></p></div>
+      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg><h3><span class="t" data-en="Real Estate">Gayrimenkul</span></h3><p><span class="t" data-en="Title deed cancellation and registration, partition of co-ownership, lease and eviction cases.">Tapu iptal ve tescil, ortaklığın giderilmesi, kira ve tahliye davaları.</span></p></div>
+      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5M12 20c0-3 2-5 4-5s6 2 6 5"/></svg><h3><span class="t" data-en="Family Law">Aile Hukuku</span></h3><p><span class="t" data-en="Divorce, custody, alimony and matrimonial property disputes.">Boşanma, velayet, nafaka ve mal rejimi uyuşmazlıkları.</span></p></div>
+      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4M10 12h6M10 16h6"/></svg><h3><span class="t" data-en="Commercial &amp; Contracts">Ticaret ve Sözleşmeler</span></h3><p><span class="t" data-en="Contract drafting and review, corporate advisory, data protection (KVKK) compliance.">Sözleşme hazırlama ve inceleme, şirket danışmanlığı, KVKK uyum süreçleri.</span></p></div>
+      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4h2l2 12h11l2-8H6"/><circle cx="9" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg><h3><span class="t" data-en="Consumer Law">Tüketici Hukuku</span></h3><p><span class="t" data-en="Defective goods and services, right of withdrawal, consumer arbitration committee applications.">Ayıplı mal ve hizmet, cayma hakkı, tüketici hakem heyeti başvuruları.</span></p></div>
     </div>
   </div>
 </section>
@@ -225,40 +257,46 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <section id="makaleler">
   <div class="wrap">
     <div class="head">
-      <div class="eyebrow">Makaleler ve Karar İncelemeleri</div>
-      <h2>Güncel yazılar</h2>
-      <p>Yargıtay ve Bölge Adliye Mahkemesi kararları üzerine notlar ve bilgilendirici yazılar.</p>
+      <div class="eyebrow"><span class="t" data-en="Articles &amp; Case Notes">Makaleler ve Karar İncelemeleri</span></div>
+      <h2><span class="t" data-en="Recent articles">Güncel yazılar</span></h2>
+      <p><span class="t" data-en="Notes on Court of Cassation and Regional Court of Appeal decisions, and informative articles.">Yargıtay ve Bölge Adliye Mahkemesi kararları üzerine notlar ve bilgilendirici yazılar.</span></p>
     </div>
     <div class="arts">
-      <a class="art" href="#makaleler"><div class="top"><span class="tag">Ceza Hukuku</span></div><div class="body"><h3>Tutukluluğa itirazda dikkat edilmesi gereken hususlar</h3><p>Tutuklama kararına karşı itiraz süresi, merci ve gerekçe yazımında öne çıkan noktalar.</p><div class="meta"><span>Av. Ali Can Topal</span><span>Örnek yazı</span></div></div></a>
-      <a class="art" href="#makaleler"><div class="top c2"><span class="tag">Denizcilik</span></div><div class="body"><h3>Crew manager işveren sayılır mı?</h3><p>Gemi adamı alacak davalarında crew management şirketlerinin pasif husumet ehliyeti üzerine bir değerlendirme.</p><div class="meta"><span>Av. Ali Can Topal</span><span>Örnek yazı</span></div></div></a>
-      <a class="art" href="#makaleler"><div class="top c3"><span class="tag">Karar İncelemesi</span></div><div class="body"><h3>Yargıtay kararı ışığında kira temerrüdü ve tahliye</h3><p>İcra yoluyla tahliye taleplerinde temerrüt ihtarının şekli ve süresine ilişkin güncel içtihat.</p><div class="meta"><span>Av. Ali Can Topal</span><span>Örnek yazı</span></div></div></a>
+      <a class="art" href="#makaleler"><div class="top"><span class="tag"><span class="t" data-en="Criminal Law">Ceza Hukuku</span></span></div><div class="body"><h3><span class="t" data-en="Key points when challenging pre-trial detention">Tutukluluğa itirazda dikkat edilmesi gereken hususlar</span></h3><p><span class="t" data-en="Time limits, the competent authority and drafting the grounds for an objection to a detention order.">Tutuklama kararına karşı itiraz süresi, merci ve gerekçe yazımında öne çıkan noktalar.</span></p><div class="meta"><span>Av. Ali Can Topal</span><span><span class="t" data-en="Sample article">Örnek yazı</span></span></div></div></a>
+      <a class="art" href="#makaleler"><div class="top c2"><span class="tag"><span class="t" data-en="Maritime">Denizcilik</span></span></div><div class="body"><h3><span class="t" data-en="Is the crew manager the employer?">Crew manager işveren sayılır mı?</span></h3><p><span class="t" data-en="An assessment of whether crew management companies can be named as defendants in seafarer claims.">Gemi adamı alacak davalarında crew management şirketlerinin pasif husumet ehliyeti üzerine bir değerlendirme.</span></p><div class="meta"><span>Av. Ali Can Topal</span><span><span class="t" data-en="Sample article">Örnek yazı</span></span></div></div></a>
+      <a class="art" href="#makaleler"><div class="top c3"><span class="tag"><span class="t" data-en="Case Note">Karar İncelemesi</span></span></div><div class="body"><h3><span class="t" data-en="Rent default and eviction in light of a Court of Cassation decision">Yargıtay kararı ışığında kira temerrüdü ve tahliye</span></h3><p><span class="t" data-en="Recent case law on the form and timing of default notices in eviction through enforcement offices.">İcra yoluyla tahliye taleplerinde temerrüt ihtarının şekli ve süresine ilişkin güncel içtihat.</span></p><div class="meta"><span>Av. Ali Can Topal</span><span><span class="t" data-en="Sample article">Örnek yazı</span></span></div></div></a>
     </div>
-    <div class="more"><a href="#makaleler" class="btn line">Tüm Makaleler</a></div>
+    <div class="more"><a href="#makaleler" class="btn line"><span class="t" data-en="All Articles">Tüm Makaleler</span></a></div>
   </div>
 </section>
 
 <section class="contact" id="iletisim">
   <div class="wrap">
     <div class="head">
-      <div class="eyebrow">İletişim</div>
-      <h2>Bize ulaşın</h2>
-      <p>Randevu ve bilgi talepleriniz için aşağıdaki kanallardan iletişime geçebilirsiniz.</p>
+      <div class="eyebrow"><span class="t" data-en="Contact">İletişim</span></div>
+      <h2><span class="t" data-en="Contact us">Bize ulaşın</span></h2>
+      <p><span class="t" data-en="For appointments and enquiries, you can reach us through the channels below.">Randevu ve bilgi talepleriniz için aşağıdaki kanallardan iletişime geçebilirsiniz.</span></p>
     </div>
     <div class="cgrid">
+      <div>
       <div class="info">
-        <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.5-7-12a7 7 0 0114 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><p><b>Adres</b><span>Mahmutbey Mah. Taşocağı Yolu Cad. No:3<br>Ağaoğlu My Office 212, B Blok Kat:19 D:319<br>34400 Bağcılar / İstanbul</span></p></div>
-        <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg><p><b>Telefon</b><span>0506 493 35 73</span></p></div>
-        <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg><p><b>E-posta</b><span>cantopal@deselaw.com</span></p></div>
-        <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><p><b>Çalışma Saatleri</b><span>Pazartesi – Cuma, 09:00 – 18:00</span></p></div>
+        <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.5-7-12a7 7 0 0114 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><p><b><span class="t" data-en="Address">Adres</span></b><span>Mahmutbey Mah. Taşocağı Yolu Cad. No:3<br>Ağaoğlu My Office 212, B Blok Kat:19 D:319<br>34400 Bağcılar / İstanbul</span></p></div>
+        <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg><p><b><span class="t" data-en="Phone">Telefon</span></b><span>0506 493 35 73</span></p></div>
+        <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg><p><b><span class="t" data-en="Email">E-posta</span></b><span>cantopal@deselaw.com</span></p></div>
+        <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><p><b><span class="t" data-en="Office Hours">Çalışma Saatleri</span></b><span><span class="t" data-en="Monday – Friday, 09:00 – 18:00">Pazartesi – Cuma, 09:00 – 18:00</span></span></p></div>
+      </div>
+      <div class="mapbox">
+        <iframe title="DESE Hukuk konum" src="https://www.google.com/maps?q=A%C4%9Fao%C4%9Flu%20My%20Office%20212%2C%20Mahmutbey%2C%20Ta%C5%9Foca%C4%9F%C4%B1%20Yolu%20Cd.%20No%3A3%2C%2034400%20Ba%C4%9Fc%C4%B1lar/%C4%B0stanbul&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a class="dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=A%C4%9Fao%C4%9Flu%20My%20Office%20212%2C%20Mahmutbey%2C%20Ta%C5%9Foca%C4%9F%C4%B1%20Yolu%20Cd.%20No%3A3%2C%2034400%20Ba%C4%9Fc%C4%B1lar/%C4%B0stanbul" target="_blank" rel="noopener"><span class="t" data-en="Get directions">Yol tarifi al</span> →</a>
+      </div>
       </div>
       <form onsubmit="event.preventDefault();document.getElementById('ok').style.display='block';this.reset();">
-        <label>Ad Soyad</label><input required>
-        <label>Telefon / E-posta</label><input required>
-        <label>Mesajınız</label><textarea required></textarea>
-        <button class="btn gold" style="border:0;cursor:pointer">Gönder</button>
-        <div class="ok" id="ok">Önizleme: form şu an bir yere gönderilmiyor.</div>
-        <p class="note">Bu form aracılığıyla iletilen bilgiler avukat-müvekkil ilişkisi kurmaz. Kişisel verileriniz KVKK kapsamında işlenir.</p>
+        <label><span class="t" data-en="Full Name">Ad Soyad</span></label><input required>
+        <label><span class="t" data-en="Phone / Email">Telefon / E-posta</span></label><input required>
+        <label><span class="t" data-en="Your Message">Mesajınız</span></label><textarea required></textarea>
+        <button class="btn gold" style="border:0;cursor:pointer"><span class="t" data-en="Send">Gönder</span></button>
+        <div class="ok" id="ok"><span class="t" data-en="Preview: this form does not send anywhere yet.">Önizleme: form şu an bir yere gönderilmiyor.</span></div>
+        <p class="note"><span class="t" data-en="Information sent through this form does not create an attorney-client relationship. Your personal data is processed in accordance with Turkish data protection law (KVKK).">Bu form aracılığıyla iletilen bilgiler avukat-müvekkil ilişkisi kurmaz. Kişisel verileriniz KVKK kapsamında işlenir.</span></p>
       </form>
     </div>
   </div>
@@ -267,10 +305,26 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <footer>
   <div class="wrap">
     <span>© 2026 DESE Hukuk · desehukuk.com</span>
-    <span>Bu sitedeki içerikler bilgilendirme amaçlıdır, hukuki görüş niteliği taşımaz.</span>
+    <span><span class="t" data-en="Content on this site is for information only and does not constitute legal advice.">Bu sitedeki içerikler bilgilendirme amaçlıdır, hukuki görüş niteliği taşımaz.</span></span>
   </div>
 </footer>
 
 <a class="wa" href="https://wa.me/905064933573" target="_blank" rel="noopener" aria-label="WhatsApp ile yazın"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.t'));
+  els.forEach(function(e){e.dataset.tr=e.innerHTML;});
+  function set(l){
+    els.forEach(function(e){e.innerHTML=(l==='en'?e.dataset.en:e.dataset.tr);});
+    document.documentElement.lang=l;
+    document.title=l==='en'?'DESE Hukuk – Law Office':'DESE Hukuk – Avukatlık ve Hukuki Danışmanlık';
+    [].forEach.call(document.querySelectorAll('[data-l]'),function(b){b.classList.toggle('on',b.dataset.l===l);});
+    try{localStorage.setItem('lang',l);}catch(x){}
+  }
+  [].forEach.call(document.querySelectorAll('[data-l]'),function(b){b.addEventListener('click',function(ev){ev.stopPropagation();set(b.dataset.l);});});
+  var l='tr';try{l=localStorage.getItem('lang')||'tr';}catch(x){}
+  set(l);
+})();
+</script>
 </body>
 </html>
