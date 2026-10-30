@@ -48,3 +48,4 @@ th{background:#f1ede4;color:var(--navy)}
 .areas-link{font-size:15px;color:var(--muted)}
 .areas-link a{color:var(--navy)}
 @media(max-width:640px){.rels{grid-template-columns:1fr}}
+.telif{font-size:13px;color:var(--muted);background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);padding:12px 16px;margin-top:20px}
