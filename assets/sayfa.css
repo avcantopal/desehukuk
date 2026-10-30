@@ -33,3 +33,7 @@ footer a{color:var(--gold2)}
 table{width:100%;border-collapse:collapse;margin:18px 0 24px;font-size:15px;background:#fff}
 td,th{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
 th{background:#f1ede4;color:var(--navy)}
+.hero{position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1}
+.hero .ill{position:absolute;right:0;bottom:0;height:100%;width:auto;max-width:70%;opacity:.28;pointer-events:none}
+@media(min-width:900px){.hero .ill{opacity:.55;right:4%}.hero .wrap{max-width:780px;margin-left:max(22px,calc((100% - 1120px)/2))}}
