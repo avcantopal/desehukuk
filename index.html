@@ -331,7 +331,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   var f=document.getElementById('cform'),btn=document.getElementById('cbtn'),ok=document.getElementById('ok'),er=document.getElementById('err');
   f.addEventListener('submit',function(e){
     e.preventDefault();ok.style.display='none';er.style.display='none';btn.disabled=true;btn.style.opacity=.6;
-    fetch('https://formsubmit.co/ajax/cantopal@deselaw.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+    fetch('https://formsubmit.co/ajax/av.cantpl@gmail.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
       .then(function(r){return r.json();})
       .then(function(d){if(d&&(d.success==='true'||d.success===true)){ok.style.display='block';f.reset();}else{er.style.display='block';}})
       .catch(function(){er.style.display='block';})
