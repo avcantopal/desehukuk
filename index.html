@@ -142,6 +142,13 @@ form textarea{min-height:90px;resize:vertical}
 .mapbox iframe{display:block;width:100%;height:260px;border:0;filter:grayscale(.3)}
 .dir{display:block;padding:12px 16px;font-size:14px;color:var(--gold2);background:rgba(255,255,255,.04)}
 .dir:hover{color:#fff}
+.vids{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.vid{background:var(--bg);border:1px solid var(--line)}
+.vid .frame{position:relative;padding-top:56.25%;background:#000}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid h3{font-size:22px;color:var(--navy);padding:20px 22px 0}
+.vid .meta{margin:14px 22px 0;padding:12px 0 18px}
+@media(max-width:900px){.vids{grid-template-columns:1fr}}
 .wa{position:fixed;right:18px;bottom:18px;z-index:30;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}
 .wa:hover{transform:scale(1.06)}
 footer{background:#0a1830;color:rgba(255,255,255,.6);font-size:13px;padding:30px 0}
@@ -172,6 +179,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <a href="#hakkimizda"><span class="t" data-en="About">Hakkımızda</span></a>
       <a href="#alanlar"><span class="t" data-en="Practice Areas">Çalışma Alanları</span></a>
       <a href="#makaleler"><span class="t" data-en="Articles">Makaleler</span></a>
+      <a href="#videolar"><span class="t" data-en="Videos">Videolar</span></a>
       <a href="#iletisim"><span class="t" data-en="Contact">İletişim</span></a>
       <span class="lang"><button type="button" data-l="tr">TR</button> | <button type="button" data-l="en">EN</button></span>
     </nav>
@@ -183,6 +191,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <a href="#hakkimizda"><span class="t" data-en="About">Hakkımızda</span></a>
     <a href="#alanlar"><span class="t" data-en="Practice Areas">Çalışma Alanları</span></a>
     <a href="#makaleler"><span class="t" data-en="Articles">Makaleler</span></a>
+      <a href="#videolar"><span class="t" data-en="Videos">Videolar</span></a>
     <a href="#iletisim"><span class="t" data-en="Contact">İletişim</span></a>
     <span class="lang m"><button type="button" data-l="tr">TR</button> | <button type="button" data-l="en">EN</button></span>
   </div>
@@ -263,6 +272,23 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <a class="art" href="#makaleler"><div class="top c3"><span class="tag"><span class="t" data-en="Case Note">Karar İncelemesi</span></span></div><div class="body"><h3><span class="t" data-en="Validity Requirements of the Default Notice in Eviction for Non-Payment under Enforcement and Bankruptcy Law Art. 269"">İİK m.269 Kapsamında Temerrüt Nedeniyle Tahliyede İhtarın Geçerlilik Koşulları</span></h3><p><span class="t" data-en="A review of the time limit and eviction warning in the payment order, the effect of partial payment, and grounds of objection before the enforcement court."">Ödeme emrinde süre ve tahliye ihtarının içeriği, kısmi ödemenin etkisi ve icra hukuk mahkemesindeki itiraz sebepleri üzerine bir inceleme.</span></p><div class="meta"><span>Av. Can TOPAL</span><span><span class="t" data-en="Coming soon">Yakında</span></span></div></div></a>
     </div>
     <div class="more"><a href="#makaleler" class="btn line"><span class="t" data-en="All Articles">Tüm Makaleler</span></a></div>
+  </div>
+</section>
+
+<section id="videolar" class="areas">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow"><span class="t" data-en="Videos">Videolar</span></div>
+      <h2><span class="t" data-en="Informative videos">Bilgilendirici videolar</span></h2>
+      <p><span class="t" data-en="Short videos on frequently asked legal questions.">Sık merak edilen hukuki konular üzerine kısa anlatımlar.</span></p>
+    </div>
+    <div class="vids">
+      <div class="vid">
+        <div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/c9prhbQyA-8" title="Site ve Apartman Yönetimi Hukuku Hakkında Merak Edilenler" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <h3><span class="t" data-en="Frequently Asked Questions on Condominium and Apartment Management Law">Site ve Apartman Yönetimi Hukuku Hakkında Merak Edilenler</span></h3>
+        <div class="meta"><span>Av. Can TOPAL</span><span><span class="t" data-en="Property Law">Kat Mülkiyeti</span></span></div>
+      </div>
+    </div>
   </div>
 </section>
 
