@@ -286,12 +286,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <a class="dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=A%C4%9Fao%C4%9Flu%20My%20Office%20212%2C%20Mahmutbey%2C%20Ta%C5%9Foca%C4%9F%C4%B1%20Yolu%20Cd.%20No%3A3%2C%2034400%20Ba%C4%9Fc%C4%B1lar/%C4%B0stanbul" target="_blank" rel="noopener"><span class="t" data-en="Get directions">Yol tarifi al</span> →</a>
       </div>
       </div>
-      <form onsubmit="event.preventDefault();document.getElementById('ok').style.display='block';this.reset();">
-        <label><span class="t" data-en="Full Name">Ad Soyad</span></label><input required>
-        <label><span class="t" data-en="Phone / Email">Telefon / E-posta</span></label><input required>
-        <label><span class="t" data-en="Your Message">Mesajınız</span></label><textarea required></textarea>
-        <button class="btn gold" style="border:0;cursor:pointer"><span class="t" data-en="Send">Gönder</span></button>
-        <div class="ok" id="ok"><span class="t" data-en="Preview: this form does not send anywhere yet.">Önizleme: form şu an bir yere gönderilmiyor.</span></div>
+      <form id="cform">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="_subject" value="desehukuk.com - Yeni iletişim formu mesajı">
+        <input type="hidden" name="_template" value="table">
+        <label><span class="t" data-en="Full Name">Ad Soyad</span></label><input name="Ad Soyad" required>
+        <label><span class="t" data-en="Phone / Email">Telefon / E-posta</span></label><input name="Telefon / E-posta" required>
+        <label><span class="t" data-en="Your Message">Mesajınız</span></label><textarea name="Mesaj" required></textarea>
+        <button class="btn gold" id="cbtn" style="border:0;cursor:pointer"><span class="t" data-en="Send">Gönder</span></button>
+        <div class="ok" id="ok"><span class="t" data-en="Thank you, your message has been sent. We will get back to you as soon as possible.">Teşekkürler, mesajınız iletildi. En kısa sürede size dönüş yapacağız.</span></div>
+        <div class="ok" id="err" style="color:#f2a7a7"><span class="t" data-en="Your message could not be sent. Please try again or contact us by email.">Mesajınız gönderilemedi. Lütfen tekrar deneyin ya da e-posta ile ulaşın.</span></div>
         <p class="note"><span class="t" data-en="Information sent through this form does not create an attorney-client relationship. Your personal data is processed in accordance with Turkish data protection law (KVKK).">Bu form aracılığıyla iletilen bilgiler avukat-müvekkil ilişkisi kurmaz. Kişisel verileriniz KVKK kapsamında işlenir.</span></p>
       </form>
     </div>
@@ -320,6 +324,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   [].forEach.call(document.querySelectorAll('[data-l]'),function(b){b.addEventListener('click',function(ev){ev.stopPropagation();set(b.dataset.l);});});
   var l='tr';try{l=localStorage.getItem('lang')||'tr';}catch(x){}
   set(l);
+})();
+</script>
+<script>
+(function(){
+  var f=document.getElementById('cform'),btn=document.getElementById('cbtn'),ok=document.getElementById('ok'),er=document.getElementById('err');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();ok.style.display='none';er.style.display='none';btn.disabled=true;btn.style.opacity=.6;
+    fetch('https://formsubmit.co/ajax/cantopal@deselaw.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+      .then(function(r){return r.json();})
+      .then(function(d){if(d&&(d.success==='true'||d.success===true)){ok.style.display='block';f.reset();}else{er.style.display='block';}})
+      .catch(function(){er.style.display='block';})
+      .finally(function(){btn.disabled=false;btn.style.opacity=1;});
+  });
 })();
 </script>
 </body>
