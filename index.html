@@ -290,6 +290,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <input type="hidden" name="access_key" value="103e8b16-8bb0-480b-9638-58395c0cc531">
         <input type="hidden" name="subject" value="desehukuk.com - Yeni iletişim formu mesajı">
         <input type="hidden" name="from_name" value="desehukuk.com">
+        <input type="hidden" name="redirect" id="credir" value="https://desehukuk.com/?gonderildi=1#iletisim">
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <label><span class="t" data-en="Full Name">Ad Soyad</span></label><input name="Ad Soyad" required>
         <label><span class="t" data-en="Phone / Email">Telefon / E-posta</span></label><input name="Telefon / E-posta" required>
@@ -325,6 +326,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   [].forEach.call(document.querySelectorAll('[data-l]'),function(b){b.addEventListener('click',function(ev){ev.stopPropagation();set(b.dataset.l);});});
   var l='tr';try{l=localStorage.getItem('lang')||'tr';}catch(x){}
   set(l);
+})();
+</script>
+<script>
+(function(){
+  var r=document.getElementById('credir');
+  if(r){r.value=location.origin+location.pathname+'?gonderildi=1#iletisim';}
+  if(/[?&]gonderildi=1/.test(location.search)){
+    var ok=document.getElementById('ok');if(ok){ok.style.display='block';}
+    try{history.replaceState(null,'',location.pathname+'#iletisim');}catch(e){}
+    var c=document.getElementById('iletisim');if(c){c.scrollIntoView();}
+  }
 })();
 </script>
 </body>
