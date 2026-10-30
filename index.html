@@ -286,7 +286,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <a class="dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=A%C4%9Fao%C4%9Flu%20My%20Office%20212%2C%20Mahmutbey%2C%20Ta%C5%9Foca%C4%9F%C4%B1%20Yolu%20Cd.%20No%3A3%2C%2034400%20Ba%C4%9Fc%C4%B1lar/%C4%B0stanbul" target="_blank" rel="noopener"><span class="t" data-en="Get directions">Yol tarifi al</span> →</a>
       </div>
       </div>
-      <form id="cform">
+      <form id="cform" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="103e8b16-8bb0-480b-9638-58395c0cc531">
         <input type="hidden" name="subject" value="desehukuk.com - Yeni iletişim formu mesajı">
         <input type="hidden" name="from_name" value="desehukuk.com">
@@ -325,19 +325,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   [].forEach.call(document.querySelectorAll('[data-l]'),function(b){b.addEventListener('click',function(ev){ev.stopPropagation();set(b.dataset.l);});});
   var l='tr';try{l=localStorage.getItem('lang')||'tr';}catch(x){}
   set(l);
-})();
-</script>
-<script>
-(function(){
-  var f=document.getElementById('cform'),btn=document.getElementById('cbtn'),ok=document.getElementById('ok'),er=document.getElementById('err');
-  f.addEventListener('submit',function(e){
-    e.preventDefault();ok.style.display='none';er.style.display='none';btn.disabled=true;btn.style.opacity=.6;
-    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
-      .then(function(r){return r.json();})
-      .then(function(d){if(d&&d.success===true){ok.style.display='block';f.reset();}else{er.style.display='block';}})
-      .catch(function(){er.style.display='block';})
-      .finally(function(){btn.disabled=false;btn.style.opacity=1;});
-  });
 })();
 </script>
 </body>
