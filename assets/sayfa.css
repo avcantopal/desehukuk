@@ -131,3 +131,13 @@ article .box>:last-child{margin-bottom:0}
 article p,article li,article .box p{text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto}
 article .cta,article .aband blockquote,article .related p{text-align:center;hyphens:manual}
 article .related .areas-link{text-align:left}
+
+/* dil seçici */
+header .hr{display:flex;align-items:center;gap:22px}
+header .lang{display:inline-flex;align-items:center;gap:6px;font-size:12px;border:1px solid rgba(255,255,255,.3);padding:5px 10px;border-radius:3px}
+header .lang a{color:#fff;opacity:.6;text-decoration:none}
+header .lang a.on{opacity:1;color:var(--gold2);font-weight:600}
+header .lang a:hover{opacity:1}
+header .lang i{font-style:normal;opacity:.5}
+@media(max-width:520px){header .hr{gap:12px}header .back{font-size:12px}}
+@media(max-width:520px){header .hr .back{display:none}}
