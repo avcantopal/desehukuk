@@ -71,14 +71,18 @@ header:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;bac
 .logo .wm small:after{content:"";width:18px;height:1px;background:linear-gradient(90deg,rgba(214,180,131,.8),transparent)}
 @media(max-width:520px){.logo{gap:11px}.logo .crest{width:34px;height:38px}.logo .sep{height:32px}.logo .wm b{font-size:26px}.logo .wm small{font-size:8.5px;letter-spacing:.26em}.logo .wm small:after{display:none}}
 
-/* about media */
-.about-media{position:relative;padding:0 0 130px 0}
-.aimg{position:relative;margin-left:40px}
-.aimg:before{content:"";position:absolute;top:-16px;right:-16px;width:62%;height:70%;border:1px solid var(--gold);z-index:0}
-.aimg img{position:relative;z-index:1;display:block;width:100%;height:400px;object-fit:cover;filter:saturate(.9) contrast(1.05);box-shadow:0 24px 50px rgba(15,34,64,.18)}
-.about-media .card-person{position:absolute;left:0;bottom:0;width:72%;z-index:2;box-shadow:0 18px 40px rgba(15,34,64,.14);padding:26px 28px}
-.about-media .card-person .avatar{width:58px;height:58px;margin-bottom:12px}
-@media(max-width:900px){.aimg{margin-left:0}.aimg img{height:240px}.about-media{padding-bottom:0}.about-media .card-person{position:relative;width:auto;margin:-50px 18px 0}}
+/* about card */
+.pcard{position:relative;min-height:470px;overflow:hidden;background:#0a1830;box-shadow:0 30px 60px rgba(15,34,64,.22);display:flex;align-items:flex-end}
+.pcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.pcard:hover img{transform:scale(1.05)}
+.pcard:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,24,48,0) 0%,rgba(10,24,48,.25) 25%,rgba(10,24,48,.85) 52%,rgba(10,24,48,.97) 75%)}
+.pcard:after{content:"";position:absolute;inset:14px;z-index:2;border:1px solid rgba(214,180,131,.45);pointer-events:none}
+.pbody{position:relative;z-index:3;padding:0 40px 40px;color:#fff}
+.pbody h3{font-size:34px;color:#fff;margin:0}
+.pbody .role{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);font-weight:600;margin-top:6px}
+.pline{display:block;width:46px;height:1px;background:var(--gold2);margin:18px 0}
+.pcard .pbody p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.85);margin:0}
+@media(max-width:900px){.pcard{min-height:430px}.pbody{padding:0 28px 30px}}
 /* article card photos */
 .art .top{height:190px;background-size:cover!important;background-position:center!important;transition:background-size .5s}
 .art .top:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,24,48,.05) 30%,rgba(10,24,48,.75) 100%);transition:.4s}
@@ -328,13 +332,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <p><span class="t" data-en="DESE Hukuk ve Danışmanlık provides legal representation and advisory services to individuals and companies across a broad range of fields, in particular criminal, employment, maritime, enforcement and insolvency, and commercial law.">DESE Hukuk ve Danışmanlık; bireylere ve şirketlere ceza, iş, denizcilik, icra-iflas ve ticaret hukuku başta olmak üzere geniş bir alanda avukatlık ve danışmanlık hizmeti vermektedir.</span></p>
       <p><span class="t" data-en="In every matter, we keep our clients clearly and regularly informed and assess legal risks from the outset.">Her dosyada müvekkilin süreç hakkında açık ve düzenli bilgilendirilmesini, hukuki risklerin baştan değerlendirilmesini esas alıyoruz.</span></p>
     </div>
-    <div class="about-media rv">
-      <div class="aimg"><img src="/assets/img/tokmak-kitap.jpg" alt="" loading="lazy" width="678" height="452"></div>
-    <div class="card-person">
-      <div class="avatar"><svg class="crest" width="40" height="45" viewBox="0 0 100 112" aria-hidden="true"><defs><linearGradient id="ga" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6e4b5"/><stop offset=".35" stop-color="#d2ab6c"/><stop offset=".6" stop-color="#8f6d3c"/><stop offset=".85" stop-color="#e8cf98"/><stop offset="1" stop-color="#b8915a"/></linearGradient><linearGradient id="na" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b3a66"/><stop offset="1" stop-color="#081428"/></linearGradient></defs><path d="M50 4L94 17V54C94 82 74 100 50 109C26 100 6 82 6 54V17Z" fill="url(#na)" stroke="url(#ga)" stroke-width="3" stroke-linejoin="round"/><path d="M50 12L87 23V54C87 77 70 93 50 101C30 93 13 77 13 54V23Z" fill="none" stroke="url(#ga)" stroke-width=".9" opacity=".55"/><path transform="translate(50 57) scale(.86) translate(-56 -50)" fill-rule="evenodd" fill="url(#ga)" d="M30 22H52C72 22 82 36 82 50C82 64 72 78 52 78H30V74H36V26H30ZM46 27V73H52C66 73 71 62 71 50C71 38 66 27 52 27Z"/><path d="M50 88l3 3-3 3-3-3z" fill="url(#ga)"/><path d="M50 16l2 2-2 2-2-2z" fill="url(#ga)"/></svg></div>
-      <h3>Av. Can TOPAL</h3>
-      <div class="role"><span class="t" data-en="Attorney at Law">Avukat</span></div>
-      <p><span class="t" data-en="Provides litigation and legal advisory services to individual and corporate clients in criminal, employment, enforcement and insolvency, real estate, family and commercial law, as well as work permits for foreign nationals.">Ceza, iş, icra ve iflas, gayrimenkul, aile ve ticaret hukuku ile yabancıların çalışma izni alanlarında, bireysel ve kurumsal müvekkillerine dava takibi ve hukuki danışmanlık hizmeti sunmaktadır.</span></p>
+    <div class="pcard rv">
+      <img src="/assets/img/tokmak-kitap.jpg" alt="" loading="lazy" width="678" height="452">
+      <div class="pbody">
+        <h3>Av. Can TOPAL</h3>
+        <div class="role"><span class="t" data-en="Attorney at Law">Avukat</span></div>
+        <span class="pline"></span>
+        <p><span class="t" data-en="Provides litigation and legal advisory services to individual and corporate clients in criminal, employment, enforcement and insolvency, real estate, family and commercial law, as well as work permits for foreign nationals.">Ceza, iş, icra ve iflas, gayrimenkul, aile ve ticaret hukuku ile yabancıların çalışma izni alanlarında, bireysel ve kurumsal müvekkillerine dava takibi ve hukuki danışmanlık hizmeti sunmaktadır.</span></p>
+      </div>
     </div>
   </div>
 </section>
