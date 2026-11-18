@@ -95,3 +95,34 @@ body{overflow-x:hidden}
   .hero.photo:after{display:none}
   .hero.photo .hbg{order:2;position:relative;inset:auto;left:auto;-webkit-mask-image:none;mask-image:none;background-position:center;aspect-ratio:3/2;margin:34px 34px 0;outline:1px solid rgba(214,180,131,.55);outline-offset:10px;box-shadow:0 20px 40px rgba(0,0,0,.4)}
 }
+
+/* makale tipografisi v2: tek boy, kalın vurgu yok */
+article{padding:72px 0 48px}
+article .wrap{max-width:740px}
+article p,article li,article td,article th,article blockquote,article .box,article .lead,article .note,article .telif,article .cta{font-size:17px!important;line-height:1.9;letter-spacing:.003em}
+article p,article li,article td,article .box{color:#2b3442}
+article p{margin:0 0 1.25em}
+article .lead{color:#2b3442;font-style:normal}
+article strong,article b:not(.rel b){font-weight:inherit;color:inherit}
+article em{font-style:italic}
+article h2{position:relative;font-size:31px;font-weight:600;letter-spacing:.005em;color:var(--navy);margin:58px 0 18px;padding-top:22px}
+article h2:before{content:"";position:absolute;left:0;top:0;width:42px;height:1px;background:var(--gold)}
+article h3{font-size:24px;font-weight:600;color:var(--navy);margin:36px 0 12px}
+article ul,article ol{margin:0 0 1.4em;padding-left:0;list-style:none;counter-reset:li}
+article li{position:relative;padding-left:28px;margin-bottom:.55em}
+article ul>li:before{content:"";position:absolute;left:4px;top:.82em;width:6px;height:6px;border:1px solid var(--gold);transform:rotate(45deg)}
+article ol>li{counter-increment:li}
+article ol>li:before{content:counter(li,decimal-leading-zero);position:absolute;left:0;top:0;font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;color:var(--gold);font-size:17px}
+article blockquote{font-style:italic;color:#2b3442;background:#fff;border-left:2px solid var(--gold);padding:20px 26px;margin:28px 0}
+article .box{background:#fff;border:1px solid var(--line);border-top:2px solid var(--gold);padding:26px 30px;margin:30px 0}
+article .box h3{margin-top:0}
+article table{font-size:17px;border:1px solid var(--line)}
+article th{font-weight:500;color:var(--navy);background:#f3efe6}
+article td,article th{padding:12px 14px;line-height:1.6}
+article .note,article .telif{color:var(--muted)}
+article .note{border-top:1px solid var(--line);padding-top:22px;margin-top:44px}
+article .cta{color:#fff}
+article .cta a{font-size:14px!important}
+article .aband blockquote{font-size:clamp(24px,3.4vw,34px)!important;line-height:1.35;background:none;border:0;padding:0;color:#fff}
+article .related .rel b{font-size:21px}
+article .box>:last-child{margin-bottom:0}
