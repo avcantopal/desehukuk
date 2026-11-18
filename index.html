@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+<script>document.documentElement.classList.add('js')</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
@@ -75,7 +76,66 @@ header{position:sticky;top:0;z-index:20;background:rgba(15,34,64,.97);backdrop-f
 .btn{display:inline-block;padding:14px 26px;font-size:14px;font-weight:600;letter-spacing:.04em;border-radius:2px}
 .btn.gold{background:var(--gold);color:var(--navy)}.btn.gold:hover{background:var(--gold2)}
 .btn.ghost{border:1px solid rgba(255,255,255,.4)}.btn.ghost:hover{border-color:#fff}
-.waves{position:absolute;right:-60px;bottom:-20px;width:620px;max-width:90%;opacity:.13;z-index:1}
+.hero{min-height:min(86vh,760px);display:flex;align-items:center;background:#0a1830}
+.hero>.wrap{width:100%}
+.scene{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(10,24,48,.92) 0%,rgba(10,24,48,.72) 38%,rgba(10,24,48,.15) 70%,rgba(10,24,48,0) 100%)}
+.stars circle{animation:tw 4s ease-in-out infinite}
+.stars circle:nth-child(3n){animation-delay:1.3s;animation-duration:5s}
+.stars circle:nth-child(3n+1){animation-delay:2.6s;animation-duration:6s}
+@keyframes tw{0%,100%{opacity:.25}50%{opacity:1}}
+.moon{filter:drop-shadow(0 0 18px rgba(236,217,179,.55))}
+.bridge{opacity:.85}
+.blink{animation:bl 2.4s ease-in-out infinite}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:.25}}
+.lights rect{animation:tw 7s ease-in-out infinite}
+.lights rect:nth-child(2n){animation-delay:3s;animation-duration:9s}
+.reflect{opacity:.22;animation:rf 6s ease-in-out infinite}
+@keyframes rf{0%,100%{transform:translateX(0)}50%{transform:translateX(3px)}}
+.moonpath path{opacity:.3;stroke-dasharray:22 9 8 14;animation:sh 3.2s ease-in-out infinite}
+.moonpath path:nth-child(2n){animation-delay:1.1s}
+.moonpath path:nth-child(3n){animation-delay:2.2s}
+@keyframes sh{0%,100%{opacity:.08;stroke-dashoffset:0}50%{opacity:.42;stroke-dashoffset:12}}
+.wv{opacity:.09;animation:wv 34s linear infinite}
+.w2{opacity:.07;animation-duration:46s;animation-direction:reverse}
+.w3{opacity:.11;animation-duration:26s}
+@keyframes wv{from{transform:translateX(0)}to{transform:translateX(-1600px)}}
+.ship{animation:sail 95s linear infinite;animation-delay:-28s}
+@keyframes sail{0%{transform:translate(560px,548px);opacity:0}6%{opacity:1}94%{opacity:1}100%{transform:translate(1700px,548px);opacity:0}}
+.bob{animation:bob 5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(1.6px)}}
+.hero .eyebrow,.hero h1,.hero p,.hero .btns{animation:up .9s cubic-bezier(.2,.7,.2,1) both}
+.hero h1{animation-delay:.15s}.hero p{animation-delay:.3s}.hero .btns{animation-delay:.45s}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+
+/* icon badges */
+.icw{width:58px;height:58px;display:grid;place-items:center;border:1px solid rgba(184,145,90,.45);border-radius:50%;background:linear-gradient(145deg,#fbf6ec,#f3eadb);margin-bottom:20px;position:relative;transition:.3s}
+.icw:after{content:"";position:absolute;inset:-6px;border:1px dashed rgba(184,145,90,.3);border-radius:50%;transition:.6s}
+.icw .ic{margin:0}
+.area:hover .icw{background:var(--gold);border-color:var(--gold)}
+.area:hover .icw .ic{color:var(--navy)}
+.area:hover .icw:after{transform:rotate(90deg);border-color:rgba(214,180,131,.6)}
+.area{position:relative}
+.area:before{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold2);transition:width .35s}
+.area:hover:before{width:100%}
+
+/* process */
+.process{background:var(--bg)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;position:relative;counter-reset:s}
+.steps:before{content:"";position:absolute;left:12%;right:12%;top:34px;height:1px;background:linear-gradient(90deg,transparent,var(--gold) 15%,var(--gold) 85%,transparent)}
+.step{text-align:center;position:relative}
+.step .num{width:68px;height:68px;margin:0 auto 22px;border-radius:50%;background:var(--navy);color:var(--gold2);display:grid;place-items:center;font-family:"Cormorant Garamond",serif;font-size:26px;font-weight:700;box-shadow:0 0 0 8px var(--bg),0 0 0 9px rgba(184,145,90,.45);position:relative;z-index:1;transition:.3s}
+.step:hover .num{background:var(--gold);color:var(--navy)}
+.step h3{font-size:24px;color:var(--navy);margin-bottom:8px}
+.step p{font-size:14.5px;color:var(--muted);max-width:250px;margin:0 auto}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr;row-gap:44px}.steps:before{display:none}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+@media(max-width:900px){.hero{align-items:flex-start}.hero .wrap{padding-bottom:230px}.hero:after{background:linear-gradient(180deg,rgba(10,24,48,.9) 0%,rgba(10,24,48,.78) 50%,rgba(10,24,48,.1) 78%,rgba(10,24,48,0) 100%)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}}
 
 /* strip */
 .strip{background:var(--white);border-bottom:1px solid var(--line)}
@@ -237,11 +297,65 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <a href="#alanlar" class="btn ghost"><span class="t" data-en="Practice Areas">Çalışma Alanları</span></a>
     </div>
   </div>
-  <svg class="waves" viewBox="0 0 600 300" fill="none" stroke="#fff" stroke-width="1.2">
-    <path d="M0 200 Q75 160 150 200 T300 200 T450 200 T600 200"/>
-    <path d="M0 230 Q75 190 150 230 T300 230 T450 230 T600 230"/>
-    <path d="M0 260 Q75 220 150 260 T300 260 T450 260 T600 260"/>
-    <path d="M330 170 L330 40 L420 160 Z"/><path d="M325 40 L325 175"/><path d="M280 175 L470 175 L440 200 L305 200 Z"/>
+  <svg class="scene" aria-hidden="true" viewBox="0 0 1600 700" preserveAspectRatio="xMaxYMax slice">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a1830"/><stop offset=".55" stop-color="#132c52"/><stop offset="1" stop-color="#25466f"/></linearGradient>
+      <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#112a4c"/><stop offset="1" stop-color="#071326"/></linearGradient>
+      <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#e9d3a8" stop-opacity=".35"/><stop offset=".4" stop-color="#d6b483" stop-opacity=".12"/><stop offset="1" stop-color="#d6b483" stop-opacity="0"/></radialGradient>
+      <clipPath id="seaclip"><rect x="0" y="520" width="1600" height="180"/></clipPath>
+      <path id="wave" d="M0 0q50-6 100 0t100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0 100 0"/>
+    </defs>
+    <rect width="1600" height="520" fill="url(#sky)"/>
+    <g class="stars" fill="#f3e6cc">
+      <circle cx="620" cy="70" r="1.3"/><circle cx="760" cy="140" r="1"/><circle cx="880" cy="60" r="1.5"/><circle cx="960" cy="190" r="1"/><circle cx="1040" cy="100" r="1.2"/><circle cx="1120" cy="40" r="1"/><circle cx="1210" cy="150" r="1.4"/><circle cx="1290" cy="80" r="1"/><circle cx="1470" cy="60" r="1.3"/><circle cx="1530" cy="200" r="1"/><circle cx="1560" cy="110" r="1.2"/><circle cx="700" cy="250" r="1"/><circle cx="1180" cy="260" r="1"/><circle cx="1500" cy="300" r="1"/><circle cx="830" cy="300" r="1.1"/><circle cx="540" cy="180" r="1"/><circle cx="420" cy="90" r="1.2"/><circle cx="1000" cy="300" r="1"/>
+    </g>
+    <circle cx="1380" cy="170" r="210" fill="url(#glow)"/>
+    <circle class="moon" cx="1380" cy="170" r="34" fill="#ecd9b3"/>
+    <!-- uzak köprü -->
+    <g class="bridge" fill="none" stroke="#0c1d38" stroke-width="3">
+      <path d="M180 506H920" stroke-width="5"/>
+      <path d="M384 506V418M716 506V418" stroke-width="7"/>
+      <path d="M180 500Q290 452 384 420Q550 500 716 420Q810 452 920 500" stroke-width="2"/>
+      <path d="M430 506V444M480 506V462M530 506V473M570 506V476M620 506V466M670 506V445M250 506V484M310 506V462M770 506V444M840 506V470" stroke-width="1"/>
+      <g class="blink" fill="#e8c98f" stroke="none"><circle cx="384" cy="414" r="2.4"/><circle cx="716" cy="414" r="2.4"/></g>
+      <g fill="#d6b483" stroke="none" opacity=".75"><circle cx="230" cy="504" r="1.4"/><circle cx="290" cy="504" r="1.4"/><circle cx="350" cy="504" r="1.4"/><circle cx="410" cy="504" r="1.4"/><circle cx="470" cy="504" r="1.4"/><circle cx="530" cy="504" r="1.4"/><circle cx="590" cy="504" r="1.4"/><circle cx="650" cy="504" r="1.4"/><circle cx="710" cy="504" r="1.4"/><circle cx="770" cy="504" r="1.4"/><circle cx="830" cy="504" r="1.4"/><circle cx="890" cy="504" r="1.4"/></g>
+    </g>
+    <!-- şehir silueti -->
+    <g id="city">
+      <path fill="#0d1f3b" d="M560 520Q700 494 860 503T1150 496T1400 488T1600 482V520Z"/>
+      <g fill="#091730">
+        <path d="M900 520V488h22v-8h18v40zM944 520V478h26v42zM1060 520V486h20v-10h24v44zM1420 520V474h30v46zM1456 520V490h40v30zM1560 520V470h40v50z"/>
+        <path d="M994 520V432h32v88z"/><path d="M988 434L1010 392L1032 434Z"/><path d="M1010 392V378"/>
+        <path d="M1160 520V474h180v46z"/><path d="M1196 476Q1250 402 1304 476Z"/><path d="M1166 480Q1188 452 1210 480ZM1290 480Q1312 452 1334 480Z"/>
+        <rect x="1248" y="392" width="4" height="16"/>
+        <rect x="1138" y="384" width="7" height="136"/><path d="M1136 386L1141.5 352L1147 386Z"/>
+        <rect x="1355" y="384" width="7" height="136"/><path d="M1353 386L1358.5 352L1364 386Z"/>
+        <rect x="1166" y="420" width="6" height="56"/><path d="M1164 422L1169 396L1174 422Z"/>
+        <rect x="1328" y="420" width="6" height="56"/><path d="M1326 422L1331 396L1336 422Z"/>
+        <path d="M1500 520V492h56v28z"/><path d="M1508 494Q1528 462 1548 494Z"/><rect x="1494" y="446" width="5" height="74"/><path d="M1492 448L1496.5 424L1501 448Z"/>
+      </g>
+      <g class="lights" fill="#e3c48c">
+        <rect x="905" y="496" width="3" height="3"/><rect x="926" y="490" width="3" height="3"/><rect x="952" y="486" width="3" height="3"/><rect x="960" y="500" width="3" height="3"/><rect x="1003" y="450" width="3" height="4"/><rect x="1015" y="470" width="3" height="4"/><rect x="1068" y="494" width="3" height="3"/><rect x="1090" y="484" width="3" height="3"/><rect x="1428" y="484" width="3" height="3"/><rect x="1440" y="500" width="3" height="3"/><rect x="1466" y="498" width="3" height="3"/><rect x="1568" y="480" width="3" height="3"/><rect x="1584" y="496" width="3" height="3"/>
+        <circle cx="1141.5" cy="350" r="1.6"/><circle cx="1358.5" cy="350" r="1.6"/>
+      </g>
+    </g>
+    <rect y="520" width="1600" height="180" fill="url(#sea)"/>
+    <g clip-path="url(#seaclip)">
+      <g class="reflect"><use href="#city" transform="translate(0 1040) scale(1 -1)"/></g>
+      <g class="moonpath" stroke="#e9d3a8" stroke-linecap="round">
+        <path d="M1352 532h56" stroke-width="2"/><path d="M1340 548h80" stroke-width="2"/><path d="M1360 562h44" stroke-width="1.6"/><path d="M1330 580h100" stroke-width="2"/><path d="M1350 598h60" stroke-width="1.5"/><path d="M1320 618h120" stroke-width="2"/><path d="M1346 638h70" stroke-width="1.5"/><path d="M1312 660h136" stroke-width="2"/><path d="M1340 682h80" stroke-width="1.5"/>
+      </g>
+      <g fill="none" stroke="#cfe0f5" stroke-width="1"><g transform="translate(0 560)"><use class="wv w1" href="#wave"/></g><g transform="translate(0 612)"><use class="wv w2" href="#wave"/></g><g transform="translate(0 668)"><use class="wv w3" href="#wave"/></g></g>
+    </g>
+    <!-- gemi -->
+    <g class="ship"><g class="bob">
+      <path d="M-120 22h120" stroke="#cfe0f5" stroke-opacity=".18" stroke-width="1.2"/><path d="M-80 28h80" stroke="#cfe0f5" stroke-opacity=".12" stroke-width="1"/>
+      <path fill="#06122a" d="M0 0H232L216 22H10Z"/>
+      <path fill="#06122a" d="M14 0V-34H54V0ZM24-34V-48H40V-34ZM60-6h30v6H60zM100-6h30v6h-30zM140-6h30v6h-30zM180-6h28v6h-28z"/>
+      <path stroke="#06122a" stroke-width="2.4" d="M95-6V-40L128-14M135-6V-40L168-14M175-6V-40L208-14"/>
+      <g fill="#e3c48c"><rect x="20" y="-28" width="3" height="2.4"/><rect x="27" y="-28" width="3" height="2.4"/><rect x="34" y="-28" width="3" height="2.4"/><rect x="41" y="-28" width="3" height="2.4"/><rect x="20" y="-20" width="3" height="2.4"/><rect x="34" y="-20" width="3" height="2.4"/></g>
+      <circle class="blink" cx="32" cy="-52" r="1.8" fill="#fff4dc"/><circle cx="226" cy="-6" r="1.5" fill="#7fe3a0"/>
+    </g></g>
   </svg>
 </div>
 
@@ -261,7 +375,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <p><span class="t" data-en="DESE Hukuk ve Danışmanlık provides legal representation and advisory services to individuals and companies across a broad range of fields, in particular criminal, employment, maritime, enforcement and insolvency, and commercial law.">DESE Hukuk ve Danışmanlık; bireylere ve şirketlere ceza, iş, denizcilik, icra-iflas ve ticaret hukuku başta olmak üzere geniş bir alanda avukatlık ve danışmanlık hizmeti vermektedir.</span></p>
       <p><span class="t" data-en="In every matter, we keep our clients clearly and regularly informed and assess legal risks from the outset.">Her dosyada müvekkilin süreç hakkında açık ve düzenli bilgilendirilmesini, hukuki risklerin baştan değerlendirilmesini esas alıyoruz.</span></p>
     </div>
-    <div class="card-person">
+    <div class="card-person rv">
       <div class="avatar"><svg width="40" height="36" viewBox="0 0 120 106" fill="none" stroke="#d6b483" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="9" r="6" fill="#d6b483" stroke="none"/><path d="M60 13V92M18 24Q60 16 102 24M18 24L6 58M18 24L30 58M102 24L90 58M102 24L114 58"/><path d="M3 58Q18 72 33 58Z M87 58Q102 72 117 58Z M42 100Q60 88 78 100Z" fill="#d6b483" fill-opacity=".2"/></svg></div>
       <h3>Av. Can TOPAL</h3>
       <div class="role"><span class="t" data-en="Attorney at Law">Avukat</span></div>
@@ -272,46 +386,61 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <section class="areas" id="alanlar">
   <div class="wrap">
-    <div class="head">
+    <div class="head rv">
       <div class="eyebrow"><span class="t" data-en="Practice Areas">Çalışma Alanları</span></div>
       <h2><span class="t" data-en="Support across all areas of law">Hukukun her alanında destek</span></h2>
       <p><span class="t" data-en="We provide litigation and legal advisory services in the following areas.">Aşağıdaki alanlarda dava takibi ve hukuki danışmanlık hizmeti verilmektedir.</span></p>
     </div>
     <div class="grid">
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M5 7h14M5 7l-3 7h6l-3-7zM19 7l-3 7h6l-3-7z"/></svg><h3><span class="t" data-en="Criminal Law">Ceza Hukuku</span></h3><p><span class="t" data-en="Defence and representation of complainants at the investigation and trial stages.">Soruşturma ve kovuşturma aşamalarında müdafilik ve katılan vekilliği.</span></p><a class="arel" href="/makaleler/tck-188-191-ayrimi.html"><span class="t" data-en="Related article →">İlgili yazı →</span></a></div>
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 18c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0M5 15l2-7h10l2 7M12 3v5"/></svg><h3><span class="t" data-en="Maritime Law">Denizcilik Hukuku</span></h3><p><span class="t" data-en="Seafarer wage and compensation claims; drafting and review of crew management and manning agreements; MLC 2006 compliance; litigation and mediation in disputes between shipowners, operators and seafarers.">Gemi adamı ücret ve tazminat alacakları; crew management ve manning sözleşmelerinin hazırlanması ve incelenmesi; MLC 2006 uyumu; armatör, işletmeci ve gemi adamı arasındaki uyuşmazlıklarda dava ve arabuluculuk süreçleri.</span></p></div>
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V4h8v3"/></svg><h3><span class="t" data-en="Employment Law">İş Hukuku</span></h3><p><span class="t" data-en="Employee receivables, reinstatement, severance and notice pay, mandatory mediation. Drafting of employment contracts, supplementary protocols and termination procedures for employers.">İşçi alacakları, işe iade, kıdem ve ihbar tazminatı, zorunlu arabuluculuk. İşverenler için iş sözleşmeleri, ek protokoller ve fesih süreçlerinin hazırlanması.</span></p></div>
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg><h3><span class="t" data-en="Immigration Law">Yabancılar Hukuku</span></h3><p><span class="t" data-en="Work permit applications for foreign staff and employer obligations; residence permits, citizenship applications, and objections and lawsuits against deportation decisions.">Yabancı personel için çalışma izni başvuruları ve işveren yükümlülükleri; ikamet izni, vatandaşlık başvuruları ve sınır dışı etme kararlarına karşı itiraz ve dava süreçleri.</span></p><a class="arel" href="/makaleler/yabanci-calisma-izni.html"><span class="t" data-en="Related article →">İlgili yazı →</span></a></div>
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20h16M6 20V10M10 20V10M14 20V10M18 20V10M3 10l9-6 9 6"/></svg><h3><span class="t" data-en="Enforcement &amp; Insolvency Law">İcra ve İflas Hukuku</span></h3><p><span class="t" data-en="Judgment and non-judgment enforcement proceedings, attachment and sale, debt recovery; for debtors, objections to enforcement, negative declaratory actions and restitution claims.">İlamlı ve ilamsız icra takipleri, haciz ve satış işlemleri ile alacak tahsili; borçlu tarafta takibe itiraz, menfi tespit ve istirdat davaları.</span></p><a class="arel" href="/makaleler/iik-269-temerrut-tahliye.html"><span class="t" data-en="Related article →">İlgili yazı →</span></a></div>
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg><h3><span class="t" data-en="Real Estate Law">Gayrimenkul Hukuku</span></h3><p><span class="t" data-en="Title deed cancellation and registration, partition of co-ownership, collusive transfers by the deceased (muris muvazaası), rent determination and eviction cases; legal due diligence in property sales.">Tapu iptal ve tescil, ortaklığın giderilmesi, muris muvazaası, kira tespit ve tahliye davaları; taşınmaz alım satımında hukuki inceleme.</span></p></div>
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5M12 20c0-3 2-5 4-5s6 2 6 5"/></svg><h3><span class="t" data-en="Family Law">Aile Hukuku</span></h3><p><span class="t" data-en="Legal support in uncontested and contested divorce, custody, alimony and division of matrimonial property, handled with discretion and with the interests of the client and children at the forefront.">Anlaşmalı ve çekişmeli boşanma, velayet, nafaka ve mal paylaşımı süreçlerinde gizliliğe özen gösteren, müvekkilin ve çocukların menfaatini önceleyen hukuki destek.</span></p></div>
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4M10 12h6M10 16h6"/></svg><h3><span class="t" data-en="Commercial &amp; Corporate Law">Ticaret ve Şirketler Hukuku</span></h3><p><span class="t" data-en="Company formation and general assembly procedures, drafting and review of commercial contracts, commercial receivable disputes and data protection (KVKK) compliance.">Şirket kuruluşu ve genel kurul işlemleri, ticari sözleşmelerin hazırlanması ve incelenmesi, ticari alacak uyuşmazlıkları ve KVKK uyum süreçleri.</span></p></div>
-      <div class="area"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4h2l2 12h11l2-8H6"/><circle cx="9" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg><h3><span class="t" data-en="Consumer Law">Tüketici Hukuku</span></h3><p><span class="t" data-en="Consumer arbitration committee applications, mediation and consumer court proceedings in disputes over defective goods and services, right of withdrawal, distance sales and subscriptions.">Ayıplı mal ve hizmet, cayma hakkı, mesafeli satış ve abonelik uyuşmazlıklarında tüketici hakem heyeti başvuruları, arabuluculuk ve tüketici mahkemesi davaları.</span></p></div>
+      <div class="area rv"><span class="icw"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M5 7h14M5 7l-3 7h6l-3-7zM19 7l-3 7h6l-3-7z"/></svg></span><h3><span class="t" data-en="Criminal Law">Ceza Hukuku</span></h3><p><span class="t" data-en="Defence and representation of complainants at the investigation and trial stages.">Soruşturma ve kovuşturma aşamalarında müdafilik ve katılan vekilliği.</span></p><a class="arel" href="/makaleler/tck-188-191-ayrimi.html"><span class="t" data-en="Related article →">İlgili yazı →</span></a></div>
+      <div class="area rv"><span class="icw"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 18c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0M5 15l2-7h10l2 7M12 3v5"/></svg></span><h3><span class="t" data-en="Maritime Law">Denizcilik Hukuku</span></h3><p><span class="t" data-en="Seafarer wage and compensation claims; drafting and review of crew management and manning agreements; MLC 2006 compliance; litigation and mediation in disputes between shipowners, operators and seafarers.">Gemi adamı ücret ve tazminat alacakları; crew management ve manning sözleşmelerinin hazırlanması ve incelenmesi; MLC 2006 uyumu; armatör, işletmeci ve gemi adamı arasındaki uyuşmazlıklarda dava ve arabuluculuk süreçleri.</span></p></div>
+      <div class="area rv"><span class="icw"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V4h8v3"/></svg></span><h3><span class="t" data-en="Employment Law">İş Hukuku</span></h3><p><span class="t" data-en="Employee receivables, reinstatement, severance and notice pay, mandatory mediation. Drafting of employment contracts, supplementary protocols and termination procedures for employers.">İşçi alacakları, işe iade, kıdem ve ihbar tazminatı, zorunlu arabuluculuk. İşverenler için iş sözleşmeleri, ek protokoller ve fesih süreçlerinin hazırlanması.</span></p></div>
+      <div class="area rv"><span class="icw"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span><h3><span class="t" data-en="Immigration Law">Yabancılar Hukuku</span></h3><p><span class="t" data-en="Work permit applications for foreign staff and employer obligations; residence permits, citizenship applications, and objections and lawsuits against deportation decisions.">Yabancı personel için çalışma izni başvuruları ve işveren yükümlülükleri; ikamet izni, vatandaşlık başvuruları ve sınır dışı etme kararlarına karşı itiraz ve dava süreçleri.</span></p><a class="arel" href="/makaleler/yabanci-calisma-izni.html"><span class="t" data-en="Related article →">İlgili yazı →</span></a></div>
+      <div class="area rv"><span class="icw"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20h16M6 20V10M10 20V10M14 20V10M18 20V10M3 10l9-6 9 6"/></svg></span><h3><span class="t" data-en="Enforcement &amp; Insolvency Law">İcra ve İflas Hukuku</span></h3><p><span class="t" data-en="Judgment and non-judgment enforcement proceedings, attachment and sale, debt recovery; for debtors, objections to enforcement, negative declaratory actions and restitution claims.">İlamlı ve ilamsız icra takipleri, haciz ve satış işlemleri ile alacak tahsili; borçlu tarafta takibe itiraz, menfi tespit ve istirdat davaları.</span></p><a class="arel" href="/makaleler/iik-269-temerrut-tahliye.html"><span class="t" data-en="Related article →">İlgili yazı →</span></a></div>
+      <div class="area rv"><span class="icw"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg></span><h3><span class="t" data-en="Real Estate Law">Gayrimenkul Hukuku</span></h3><p><span class="t" data-en="Title deed cancellation and registration, partition of co-ownership, collusive transfers by the deceased (muris muvazaası), rent determination and eviction cases; legal due diligence in property sales.">Tapu iptal ve tescil, ortaklığın giderilmesi, muris muvazaası, kira tespit ve tahliye davaları; taşınmaz alım satımında hukuki inceleme.</span></p></div>
+      <div class="area rv"><span class="icw"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5M12 20c0-3 2-5 4-5s6 2 6 5"/></svg></span><h3><span class="t" data-en="Family Law">Aile Hukuku</span></h3><p><span class="t" data-en="Legal support in uncontested and contested divorce, custody, alimony and division of matrimonial property, handled with discretion and with the interests of the client and children at the forefront.">Anlaşmalı ve çekişmeli boşanma, velayet, nafaka ve mal paylaşımı süreçlerinde gizliliğe özen gösteren, müvekkilin ve çocukların menfaatini önceleyen hukuki destek.</span></p></div>
+      <div class="area rv"><span class="icw"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4M10 12h6M10 16h6"/></svg></span><h3><span class="t" data-en="Commercial &amp; Corporate Law">Ticaret ve Şirketler Hukuku</span></h3><p><span class="t" data-en="Company formation and general assembly procedures, drafting and review of commercial contracts, commercial receivable disputes and data protection (KVKK) compliance.">Şirket kuruluşu ve genel kurul işlemleri, ticari sözleşmelerin hazırlanması ve incelenmesi, ticari alacak uyuşmazlıkları ve KVKK uyum süreçleri.</span></p></div>
+      <div class="area rv"><span class="icw"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4h2l2 12h11l2-8H6"/><circle cx="9" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></span><h3><span class="t" data-en="Consumer Law">Tüketici Hukuku</span></h3><p><span class="t" data-en="Consumer arbitration committee applications, mediation and consumer court proceedings in disputes over defective goods and services, right of withdrawal, distance sales and subscriptions.">Ayıplı mal ve hizmet, cayma hakkı, mesafeli satış ve abonelik uyuşmazlıklarında tüketici hakem heyeti başvuruları, arabuluculuk ve tüketici mahkemesi davaları.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="surec">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow"><span class="t" data-en="How We Work">Çalışma Sürecimiz</span></div>
+      <h2><span class="t" data-en="How does the process work?">Süreç nasıl işler?</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="num">01</div><h3><span class="t" data-en="Initial Consultation">İlk Görüşme</span></h3><p><span class="t" data-en="By phone, WhatsApp, online or at our office.">Telefon, WhatsApp, online ya da ofiste.</span></p></div>
+      <div class="step rv"><div class="num">02</div><h3><span class="t" data-en="Case Review">Dosya İncelemesi</span></h3><p><span class="t" data-en="Documents and facts are assessed.">Belgeler ve olaylar değerlendirilir.</span></p></div>
+      <div class="step rv"><div class="num">03</div><h3><span class="t" data-en="Strategy">Strateji</span></h3><p><span class="t" data-en="A roadmap tailored to your case is set; risks, options and the targeted outcome are clarified from the outset.">Dosyanıza özel bir yol haritası belirlenir; riskler, seçenekler ve hedeflenen sonuç en baştan netleştirilir.</span></p></div>
+      <div class="step rv"><div class="num">04</div><h3><span class="t" data-en="Follow-up &amp; Updates">Takip ve Bilgilendirme</span></h3><p><span class="t" data-en="You are kept regularly informed throughout the process.">Süreç boyunca düzenli bilgi verilir.</span></p></div>
     </div>
   </div>
 </section>
 
 <section id="makaleler">
   <div class="wrap">
-    <div class="head">
+    <div class="head rv">
       <div class="eyebrow"><span class="t" data-en="Articles &amp; Case Notes">Makaleler ve Karar İncelemeleri</span></div>
       <h2><span class="t" data-en="Recent articles">Güncel yazılar</span></h2>
       <p><span class="t" data-en="Notes on Court of Cassation and Regional Court of Appeal decisions, and informative articles.">Yargıtay ve Bölge Adliye Mahkemesi kararları üzerine notlar ve bilgilendirici yazılar.</span></p>
     </div>
     <div class="arts">
-      <a class="art" href="/makaleler/yabanci-calisma-izni.html"><div class="top c2"><svg class="ill" aria-hidden="true" preserveAspectRatio="xMaxYMid meet" viewBox="0 0 400 150" fill="none" stroke="#d6b483" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <a class="art rv" href="/makaleler/yabanci-calisma-izni.html"><div class="top c2"><svg class="ill" aria-hidden="true" preserveAspectRatio="xMaxYMid meet" viewBox="0 0 400 150" fill="none" stroke="#d6b483" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 <g opacity=".18" stroke="#fff"><circle cx="300" cy="75" r="62"/><path d="M238 75h124M300 13a95 95 0 010 124M300 13a95 95 0 000 124M247 45h106M247 105h106"/></g>
 <rect x="232" y="32" width="70" height="96" rx="6"/><circle cx="267" cy="70" r="16"/><path d="M251 70h32M267 54a24 24 0 010 32M267 54a24 24 0 000 32"/><path d="M248 104h38M254 114h26"/>
 <g transform="rotate(-14 335 92)"><rect x="306" y="72" width="62" height="40" rx="4" stroke-dasharray="4 3"/><path d="M316 86h42M316 98h28"/></g>
 <path d="M330 30l22-8 6 4-14 10 10 10-4 3-14-7-10 6-4-2 6-8z" fill="#d6b483" fill-opacity=".25"/>
 </svg><span class="tag"><span class="t" data-en="Work Permits">Çalışma İzni</span></span></div><div class="body"><h3><span class="t" data-en="Work Permits for Employers Hiring Staff from Abroad: 7 Points That Decide the Application">Yurt Dışından Personel Getirecek İşverenler İçin Çalışma İzni: Başvuruyu Belirleyen 7 Kritik Nokta</span></h3><p><span class="t" data-en="Two-stage application, wage and employment criteria, subcontractor structures and post-approval notifications: where employers most often get stuck.">Çift aşamalı başvuru, ücret ve istihdam kriterleri, alt işveren yapısı ve izin sonrası bildirimler: işverenlerin en sık takıldığı noktalar.</span></p><div class="meta"><span></span><span><span class="t" data-en="Read →">Oku →</span></span></div></div></a>
-      <a class="art" href="/makaleler/tck-188-191-ayrimi.html"><div class="top"><svg class="ill" aria-hidden="true" preserveAspectRatio="xMaxYMid meet" viewBox="0 0 400 150" fill="none" stroke="#d6b483" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <a class="art rv" href="/makaleler/tck-188-191-ayrimi.html"><div class="top"><svg class="ill" aria-hidden="true" preserveAspectRatio="xMaxYMid meet" viewBox="0 0 400 150" fill="none" stroke="#d6b483" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 <g opacity=".18" stroke="#fff"><path d="M200 140h190M210 128h170"/></g>
 <path d="M232 128h60M262 128V40M232 52h60M232 52l-14 32h28zM292 52l-14 32h28z"/><path d="M216 84q16 12 32 0M276 84q16 12 32 0"/><circle cx="262" cy="36" r="4" fill="#d6b483"/>
 <rect x="320" y="58" width="52" height="66" rx="3"/><path d="M320 70h52M330 82h32M330 92h24M330 102h28"/>
 <circle cx="350" cy="44" r="16"/><path d="M361 55l14 14" stroke-width="3"/>
 </svg><span class="tag"><span class="t" data-en="Criminal Law">Ceza Hukuku</span></span></div><div class="body"><h3><span class="t" data-en="Distinguishing Drug Trafficking (TCC Art. 188) from Possession for Personal Use (TCC Art. 191): Court of Cassation Criteria"">Uyuşturucu Ticareti (TCK m.188) ile Kullanmak İçin Bulundurma (TCK m.191) Ayrımında Yargıtay Ölçütleri</span></h3><p><span class="t" data-en="An analysis of the factors treated as decisive in case law: quantity seized, packaging, circumstances of arrest and the personal-use threshold."">Ele geçirilen miktar, paketleme biçimi, yakalanma koşulları ve kişisel kullanım sınırı bakımından içtihatta belirleyici kabul edilen kriterlerin değerlendirmesi.</span></p><div class="meta"><span></span><span><span class="t" data-en="Read →">Oku →</span></span></div></div></a>
-      <a class="art" href="/makaleler/iik-269-temerrut-tahliye.html"><div class="top c3"><svg class="ill" aria-hidden="true" preserveAspectRatio="xMaxYMid meet" viewBox="0 0 400 150" fill="none" stroke="#d6b483" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <a class="art rv" href="/makaleler/iik-269-temerrut-tahliye.html"><div class="top c3"><svg class="ill" aria-hidden="true" preserveAspectRatio="xMaxYMid meet" viewBox="0 0 400 150" fill="none" stroke="#d6b483" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 <g opacity=".18" stroke="#fff"><path d="M190 132h200"/></g>
 <path d="M226 132V78l44-34 44 34v54z"/><path d="M256 132v-30h28v30"/><rect x="236" y="88" width="14" height="14"/><rect x="290" y="88" width="14" height="14"/>
 <g transform="rotate(8 348 84)"><rect x="322" y="40" width="54" height="72" rx="3"/><path d="M332 54h34M332 64h34M332 74h22"/><circle cx="356" cy="96" r="10"/><path d="M352 96l3 3 6-6"/></g>
@@ -323,7 +452,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <section class="contact" id="iletisim">
   <div class="wrap">
-    <div class="head">
+    <div class="head rv">
       <div class="eyebrow"><span class="t" data-en="Contact">İletişim</span></div>
       <h2><span class="t" data-en="Contact us">Bize ulaşın</span></h2>
       <p><span class="t" data-en="For appointments and enquiries, you can reach us through the channels below.">Randevu ve bilgi talepleriniz için aşağıdaki kanallardan iletişime geçebilirsiniz.</span></p>
@@ -412,6 +541,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   document.getElementById('crej').addEventListener('click',function(){set('zorunlu');bar.classList.remove('on');});
   var cp=document.getElementById('cpref');if(cp)cp.addEventListener('click',function(e){e.preventDefault();bar.classList.add('on');});
   var v=get();if(v==='kabul'){loadAll();}else if(!v){bar.classList.add('on');}
+})();
+</script>
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){[].forEach.call(els,function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  [].forEach.call(els,function(e,i){var p=e.parentNode,k=[].indexOf.call(p.children,e);if(/grid|arts|steps|vids/.test(p.className))e.style.transitionDelay=(k%4)*90+'ms';io.observe(e);});
 })();
 </script>
 </body>
