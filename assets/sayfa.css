@@ -126,3 +126,8 @@ article .cta a{font-size:14px!important}
 article .aband blockquote{font-size:clamp(24px,3.4vw,34px)!important;line-height:1.35;background:none;border:0;padding:0;color:#fff}
 article .related .rel b{font-size:21px}
 article .box>:last-child{margin-bottom:0}
+
+/* makale metni: iki yana yaslı */
+article p,article li,article .box p{text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto}
+article .cta,article .aband blockquote,article .related p{text-align:center;hyphens:manual}
+article .related .areas-link{text-align:left}
