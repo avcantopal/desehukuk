@@ -67,3 +67,20 @@ header:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;bac
 .logo .wm small:after{content:"";width:18px;height:1px;background:linear-gradient(90deg,rgba(214,180,131,.8),transparent)}
 @media(max-width:520px){.logo{gap:11px}.logo .crest{width:34px;height:38px}.logo .sep{height:32px}.logo .wm b{font-size:26px}.logo .wm small{font-size:8.5px;letter-spacing:.26em}.logo .wm small:after{display:none}}
 @media(prefers-reduced-motion:reduce){.logo .wm b{animation:none}}
+
+/* photo hero, progress, band, cta */
+body{overflow-x:hidden}
+#prog{position:fixed;left:0;top:0;height:3px;width:100%;z-index:60;background:linear-gradient(90deg,#b8915a,#f6e4b5,#d6b483);transform:scaleX(0);transform-origin:0 50%;box-shadow:0 0 8px rgba(214,180,131,.6)}
+.hero.photo{padding:110px 0 90px;background:#0a1830}
+.hero.photo .hbg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.04);animation:kb 26s ease-in-out infinite alternate}
+.hero.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,24,48,.94) 0%,rgba(10,24,48,.82) 45%,rgba(10,24,48,.45) 100%);z-index:0}
+.hero.photo .wrap{z-index:1}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.12)}}
+.aband{position:relative;margin:48px calc(50% - 50vw);padding:96px 22px;background-size:cover;background-position:center;background-attachment:fixed;color:#fff;text-align:center}
+.aband:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,24,48,.82),rgba(10,24,48,.68),rgba(10,24,48,.86))}
+.aband blockquote{position:relative;border:0;background:none;padding:0;margin:0 auto;max-width:760px;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:600;font-size:clamp(24px,3.4vw,36px);line-height:1.3;color:#fff}
+.aband blockquote:before{content:"\201C";display:block;font-size:70px;line-height:.6;color:var(--gold2);margin-bottom:14px;font-style:normal}
+.aband figcaption{position:relative;margin-top:18px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2)}
+.cta{position:relative;background:linear-gradient(rgba(10,24,48,.86),rgba(10,24,48,.9)),url(/assets/img/tokmak-gozluk.jpg) center/cover;padding:46px 30px;border-top:2px solid var(--gold);font-size:18px}
+@media(hover:none),(max-width:900px){.aband{background-attachment:scroll;padding:70px 22px}.hero.photo{padding:80px 0 64px}.hero.photo:after{background:rgba(10,24,48,.84)}}
+@media(prefers-reduced-motion:reduce){.hero.photo .hbg{animation:none}}
