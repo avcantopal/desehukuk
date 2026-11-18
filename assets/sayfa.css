@@ -3,7 +3,7 @@
 body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;font-size:17px}
 a{color:inherit}
 .wrap{max-width:780px;margin:0 auto;padding:0 22px}
-header{background:var(--navy);color:#fff}
+header{background:var(--navy);color:#fff;position:relative}
 header .wrap{max-width:1120px;display:flex;align-items:center;justify-content:space-between;height:68px}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
 .logo b{font-family:"Cormorant Garamond",serif;font-size:26px;font-weight:700;letter-spacing:.16em;line-height:1;display:block}
@@ -52,3 +52,18 @@ th{background:#f1ede4;color:var(--navy)}
 
 .wa{position:fixed;right:18px;bottom:18px;z-index:30;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25);transition:transform .2s}
 .wa:hover{transform:scale(1.06)}
+
+/* logo */
+header{box-shadow:0 1px 0 rgba(214,180,131,.0)}
+header:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(214,180,131,.55) 20%,rgba(246,228,181,.9) 50%,rgba(214,180,131,.55) 80%,transparent)}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit}
+.logo .crest{flex:none;filter:drop-shadow(0 3px 8px rgba(0,0,0,.45));transition:transform .4s}
+.logo:hover .crest{transform:translateY(-1px) scale(1.04)}
+.logo .sep{width:1px;height:38px;background:linear-gradient(transparent,rgba(214,180,131,.8),transparent)}
+.logo .wm{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+.logo .wm b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:31px;font-weight:600;letter-spacing:.36em;margin-right:-.36em;line-height:1;background:linear-gradient(100deg,#c9a063 0%,#e9d3a0 30%,#fff3d6 42%,#e9d3a0 54%,#b8915a 75%,#d9bc85 100%);background-size:250% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:shine 7s ease-in-out infinite}
+@keyframes shine{0%,55%{background-position:100% 0}100%{background-position:-60% 0}}
+.logo .wm small{display:flex;align-items:center;gap:8px;margin-top:7px;font-family:Inter,system-ui,sans-serif;font-style:normal;font-size:9.5px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:rgba(233,211,160,.92)}
+.logo .wm small:after{content:"";width:18px;height:1px;background:linear-gradient(90deg,rgba(214,180,131,.8),transparent)}
+@media(max-width:520px){.logo{gap:11px}.logo .crest{width:34px;height:38px}.logo .sep{height:32px}.logo .wm b{font-size:26px}.logo .wm small{font-size:8.5px;letter-spacing:.26em}.logo .wm small:after{display:none}}
+@media(prefers-reduced-motion:reduce){.logo .wm b{animation:none}}
