@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>Kira Artış Oranı Hesaplama 2026 (Konut ve İşyeri, TÜFE) | DESE Hukuk</title>
+<meta name="description" content="Konut ve çatılı işyeri kiranızın yasal azami artışını TÜFE 12 aylık ortalamasına göre hesaplayın. Güncel oranlar, %25 sınırının sona ermesi, döviz kirası ve beş yıllık kira tespiti hakkında bilgiler.">
+<link rel="canonical" href="https://desehukuk.com/araclar/kira-artis-hesaplama.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://desehukuk.com/araclar/kira-artis-hesaplama.html">
+<meta property="og:title" content="Kira Artış Oranı Hesaplama (Konut ve İşyeri)">
+<meta property="og:description" content="Yenileme tarihine göre yasal azami kira artışını hesaplayın.">
+<meta property="og:image" content="https://desehukuk.com/assets/img/ev-anahtar.jpg">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="DESE Hukuk ve Danışmanlık">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/sayfa.css">
+<link rel="stylesheet" href="/assets/araclar.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Kira Artış Oranı Hesaplama","url":"https://desehukuk.com/araclar/kira-artis-hesaplama.html","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"tr","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"publisher":{"@type":"LegalService","name":"DESE Hukuk ve Danışmanlık","url":"https://desehukuk.com/"}}</script>
+</head>
+<body>
+<header><div class="wrap">
+  <a href="/" class="logo" aria-label="DESE Hukuk ve Danışmanlık"><span class="wm"><b>DESE</b><small>Hukuk ve Danışmanlık</small></span></a>
+  <div class="hr"><a href="/araclar/" class="back">← Hesaplama araçları</a></div>
+</div></header>
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Kira Hukuku · Hesaplama Aracı</div>
+  <h1>Kira Artış Oranı Hesaplama</h1>
+  <div class="meta" id="guncel"></div>
+</div></div>
+
+<main class="tool"><div class="wrap">
+
+<form class="calc" id="f" novalidate>
+  <div class="row">
+    <div class="f">
+      <label for="tur">Kiralanan</label>
+      <select id="tur">
+        <option value="konut">Konut</option>
+        <option value="isyeri">Çatılı işyeri (dükkan, ofis, depo)</option>
+        <option value="catisiz">Çatısız yer (arsa, açık otopark vb.)</option>
+      </select>
+    </div>
+    <div class="f">
+      <label for="kira">Mevcut aylık kira (TL)</label>
+      <input type="text" id="kira" inputmode="decimal" autocomplete="off" placeholder="Örn. 25.000">
+    </div>
+  </div>
+  <div class="row">
+    <div class="f">
+      <label for="tarih">Yeni kira yılının başladığı tarih</label>
+      <input type="date" id="tarih">
+      <div class="hint">Sözleşmenin yıl dönümü, yani artışın uygulanacağı ilk gün.</div>
+    </div>
+    <div class="f">
+      <label for="oran">Oran (%) <span style="font-weight:400;color:var(--muted)">isteğe bağlı</span></label>
+      <input type="text" id="oran" inputmode="decimal" autocomplete="off" placeholder="Boş bırakın, otomatik gelsin">
+      <div class="hint">Tabloda olmayan aylar veya sözleşmedeki daha düşük oran için.</div>
+    </div>
+  </div>
+  <label class="chk"><input type="checkbox" id="doviz"> Kira bedeli yabancı para (döviz) olarak kararlaştırıldı</label>
+  <label class="chk"><input type="checkbox" id="bes"> Kira ilişkisi beş yılı doldurdu (yeni dönem 6. yıl veya sonrası)</label>
+  <button type="submit">Hesapla</button>
+
+  <div class="res" id="res" aria-live="polite"></div>
+</form>
+
+<h2>Kira artışında yasal sınır</h2>
+<p>Türk Borçlar Kanunu'nun 344. maddesine göre yenilenen kira dönemlerinde uygulanacak kira bedeline ilişkin anlaşmalar, bir önceki kira yılında tüketici fiyat endeksindeki on iki aylık ortalamalara göre değişim oranını geçmemek koşuluyla geçerlidir. Sınırı aşan artış, aşan kısım yönünden geçersizdir. Sözleşmede daha düşük bir oran kararlaştırılmışsa o oran uygulanır.</p>
+<p>Bu kural, TBK m.339 uyarınca konut ve çatılı işyeri kiralarının tamamına uygulanır. Kiracının tacir veya şirket olduğu işyeri kiraları için öngörülen erteleme 1 Temmuz 2020'de sona erdiğinden bugün konut ile işyeri arasında oran bakımından fark yoktur. Arsa, açık otopark gibi çatısız yerlerde ve niteliği gereği geçici kullanıma özgülenmiş taşınmazların altı ay veya daha kısa süreli kiralanmasında bu sınır uygulanmaz.</p>
+
+<h2>%25 sınırı hala geçerli mi?</h2>
+<p>Hayır. Konut kiraları için getirilen %25 sınırı yalnızca 11 Haziran 2022 ile 1 Temmuz 2024 (dahil) arasında yenilenen kira dönemlerinde uygulandı ve işyerlerini kapsamadı. 2 Temmuz 2024'ten sonra yenilenen dönemlerde tavan, TÜFE'nin on iki aylık ortalamasıdır. Bu dönemde %25'i aşan artış yapılmışsa fazla ödenen kira geri istenebilir.</p>
+
+<h2>Beş yıl dolunca ve döviz kiralarında</h2>
+<p>Beş yıldan uzun süreli veya beş yıldan sonra yenilenen sözleşmelerde, her beş yılın sonunda yeni kira bedeli hakim tarafından TÜFE değişimi, kiralananın durumu ve emsal kira bedelleri gözetilerek hakkaniyete göre belirlenir (TBK m.344/3). Bu durumda kira, piyasa düzeyine yaklaştırılabilir ve artış TÜFE oranıyla sınırlı kalmaz. Kira yabancı para olarak kararlaştırılmışsa beş yıl geçmedikçe bedelde değişiklik yapılamaz; beş yıldan sonra yine hakim belirler.</p>
+
+<h2>Aylara göre azami artış oranları</h2>
+<p>Oran, kira döneminin başladığı aydan önceki ayın TÜFE verisiyle açıklanan on iki aylık ortalamadır. Örneğin Kasım ayında yenilenen bir sözleşmede Ekim verisi esas alınır.</p>
+<div class="tbl-wrap"><table id="oranTbl"><thead><tr><th>Yenilemenin yapıldığı ay</th><th class="n">Azami artış</th></tr></thead><tbody></tbody></table></div>
+
+<div class="cta">Kira tespiti, fazla kira iadesi, tahliye veya kira alacağı için hukuki destek alın.<br><a href="https://wa.me/905064933573?text=Merhaba%2C%20kira%20konusunda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum." target="_blank" rel="noopener">WhatsApp ile yazın</a></div>
+
+<p class="disc">Oranlar TÜİK'in açıkladığı TÜFE verilerine dayanır. Bu araç genel bilgilendirme amaçlıdır; sözleşmedeki özel hükümler, kira tespit davası ve diğer koşullar sonucu değiştirebilir. Sonuç hukuki mütalaa niteliği taşımaz.</p>
+
+</div></main>
+
+<footer><div class="wrap">
+  <span>© 2026 DESE Hukuk ve Danışmanlık · <a href="/">desehukuk.com</a> · <a href="/kvkk.html">KVKK Aydınlatma Metni</a> · <a href="/cerez-politikasi.html">Çerez Politikası</a></span>
+  <span>Hesaplama araçları genel bilgilendirme amaçlıdır; belirli bir uyuşmazlığa ilişkin hukuki mütalaa niteliği taşımaz ve avukat-müvekkil ilişkisi kurmaz.</span>
+</div></footer>
+<a class="wa" href="https://wa.me/905064933573?text=Merhaba%2C%20desehukuk.com%20%C3%BCzerinden%20ula%C5%9F%C4%B1yorum." target="_blank" rel="noopener" aria-label="WhatsApp ile yazın"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<script src="/assets/veri/oranlar.js"></script>
+<script>
+(function(){
+  var V = window.DESE_VERI;
+  var AY = ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+  var tl = new Intl.NumberFormat('tr-TR',{style:'currency',currency:'TRY',minimumFractionDigits:2});
+  var pf = new Intl.NumberFormat('tr-TR',{minimumFractionDigits:2,maximumFractionDigits:2});
+  function $(id){return document.getElementById(id);}
+  function parse(s){
+    s = String(s||'').replace(/\s|TL|₺|%/gi,'');
+    if(!s) return NaN;
+    if(s.indexOf(',')>-1){ s = s.replace(/\./g,'').replace(',','.'); }
+    else if(/^\d{1,3}(\.\d{3})+$/.test(s)){ s = s.replace(/\./g,''); }
+    return parseFloat(s);
+  }
+  function ayAdi(key){var p=key.split('-');return AY[+p[1]-1]+' '+p[0];}
+  function fmtDate(iso){var p=iso.split('-');return p[2]+'.'+p[1]+'.'+p[0];}
+  function sonrakiAy(key){var p=key.split('-').map(Number);p[1]++;if(p[1]>12){p[1]=1;p[0]++;}return p[0]+'-'+(p[1]<10?'0':'')+p[1];}
+
+  $('guncel').textContent = 'Güncel oran: '+ayAdi(V.tufeSonAy)+' için %'+pf.format(V.tufe12[V.tufeSonAy])+' · Son güncelleme '+fmtDate(V.guncelleme);
+
+  // varsayılan tarih: bu ayın 1'i
+  var now = new Date(); $('tarih').value = now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-01';
+
+  // tablo: en yeniden eskiye
+  var keys = Object.keys(V.tufe12).sort().reverse(), tb = $('oranTbl').tBodies[0];
+  keys.forEach(function(k){ var tr=document.createElement('tr'); tr.innerHTML='<td>'+ayAdi(k)+'</td><td class="n">%'+pf.format(V.tufe12[k])+'</td>'; tb.appendChild(tr); });
+
+  var waBase = 'https://wa.me/905064933573?text=';
+  function waBtn(msg,txt){ return '<a class="send" href="'+waBase+encodeURIComponent(msg)+'" target="_blank" rel="noopener">'+(txt||'Bu sonuçla bize WhatsApp\'tan yazın')+'</a>'; }
+
+  $('f').addEventListener('submit',function(e){
+    e.preventDefault();
+    var res=$('res'), tur=$('tur').value, kira=parse($('kira').value), tarih=$('tarih').value,
+        elle=parse($('oran').value), doviz=$('doviz').checked, bes=$('bes').checked;
+    res.className='res on';
+
+    if(tur==='catisiz'){
+      res.innerHTML = '<div class="warn">Arsa, açık otopark gibi çatısız yerlerin kirasında TBK m.344\'teki TÜFE sınırı uygulanmaz. Artış, sözleşmedeki hükme ve genel kira hükümlerine göre belirlenir.</div>'
+        + waBtn('Merhaba, desehukuk.com kira artış aracını kullandım. Çatısız bir yerin (arsa/otopark) kira artışı konusunda görüşmek istiyorum.','Sözleşmenizi birlikte değerlendirelim');
+      return;
+    }
+    if(doviz && !bes){
+      res.innerHTML = '<div class="warn">Kira bedeli yabancı para olarak kararlaştırılmışsa beş yıl geçmedikçe bedelde değişiklik yapılamaz (TBK m.344/4). Bu sürede yapılan artış talepleri geçersizdir. Aşırı ifa güçlüğü (TBK m.138) hükmü saklıdır.</div>'
+        + waBtn('Merhaba, desehukuk.com kira artış aracını kullandım. Döviz cinsinden kira sözleşmem için görüşmek istiyorum.','Döviz kiranız için görüşelim');
+      return;
+    }
+    if(doviz && bes){
+      res.innerHTML = '<div class="warn">Döviz cinsinden kirada beş yıl geçtikten sonra yeni bedel, yabancı paranın değerindeki değişiklikler de gözetilerek hakim tarafından TÜFE değişimi, kiralananın durumu ve emsal kiralara göre belirlenir (TBK m.344/4 ve 3). Bu, kira tespit davasıyla yapılır.</div>'
+        + waBtn('Merhaba, desehukuk.com kira artış aracını kullandım. Döviz cinsinden ve beş yılı dolan kira sözleşmem için kira tespiti konusunda görüşmek istiyorum.','Kira tespiti için görüşelim');
+      return;
+    }
+    if(!(kira>0)){ res.innerHTML='<div class="warn red">Lütfen geçerli bir aylık kira tutarı girin.</div>'; return; }
+    if(!/^\d{4}-\d{2}-\d{2}$/.test(tarih)){ res.innerHTML='<div class="warn red">Lütfen yeni kira yılının başladığı tarihi girin.</div>'; return; }
+
+    var key = tarih.slice(0,7), oran, kaynak='';
+    if(elle>0){ oran = elle; kaynak = 'girdiğiniz oran'; }
+    else if(V.tufe12[key]!=null){ oran = V.tufe12[key]; kaynak = ayAdi(key)+' için açıklanan TÜFE 12 aylık ortalaması'; }
+    else if(key > V.tufeSonAy){
+      var beklenen = key===sonrakiAy(V.tufeSonAy);
+      res.innerHTML = '<div class="warn">'+ayAdi(key)+' oranı '+(beklenen?'henüz açıklanmadı. TÜİK bu oranı ayın 3\'ünde açıklar; açıklandığında tabloya eklenir.':'henüz açıklanmadı.')+' Şimdilik tahmini bir oranı "Oran" alanına girerek hesaplayabilirsiniz.</div>';
+      return;
+    } else {
+      res.innerHTML = '<div class="warn">Tablomuzda '+ayAdi(key)+' için oran yok. TÜİK\'in o ay için açıkladığı on iki aylık ortalamayı "Oran" alanına girerek hesaplayabilirsiniz.</div>';
+      return;
+    }
+
+    var notlar = [];
+    var k25 = (tur==='konut' && tarih>=V.konut25.bas && tarih<=V.konut25.bit);
+    if(k25 && oran>25){ notlar.push('Yenileme tarihi 11.06.2022 - 01.07.2024 arasında olduğundan konut kiraları için geçici %25 sınırı uygulandı (TBK geçici m.1-2). Bu dönemde daha fazla artış yapıldıysa fazla ödenen kısım geri istenebilir.'); oran = 25; }
+    else if(k25){ notlar.push('Yenileme tarihi geçici %25 sınırının uygulandığı döneme denk geliyor; TÜFE ortalaması %25\'in altında olduğundan TÜFE oranı esas alındı.'); }
+
+    var artis = kira*oran/100, yeni = kira+artis;
+    var h = '<div class="big"><div class="main"><span>Yeni azami kira</span><b>'+tl.format(yeni)+'</b></div>'
+      + '<div><span>Azami artış oranı</span><b>%'+pf.format(oran)+'</b></div>'
+      + '<div><span>Aylık artış</span><b>'+tl.format(artis)+'</b></div></div>';
+    h += '<p style="font-size:15px">Oran: '+kaynak+'. Yeni kira yılı boyunca ödenecek toplam kira en fazla '+tl.format(yeni*12)+' olur. Sözleşmede daha düşük bir oran varsa o oran uygulanır; kiraya veren bu tutarın üzerinde bir artışı tek taraflı olarak talep edemez.</p>';
+    notlar.forEach(function(n){ h += '<div class="warn">'+n+'</div>'; });
+
+    var msg;
+    if(bes){
+      h += '<div class="warn"><b>Beş yıl doldu:</b> Yeni kira yılında bedel, TÜFE ile sınırlı olmaksızın emsal kiralar ve kiralananın durumu gözetilerek hakim tarafından belirlenebilir (TBK m.344/3). Bu hesap, taraflar anlaşırsa uygulanacak TÜFE tavanını gösterir. Kira tespit davası yeni dönemin başlangıcından en geç otuz gün önce açılırsa ya da kiraya veren bu süre içinde kiracıya artış için yazılı bildirim yapıp davayı yeni kira dönemi sonuna kadar açarsa, mahkemenin belirleyeceği kira yeni dönemin başından itibaren geçerli olur (TBK m.345). Sözleşmede artış hükmü varsa, yeni dönem sonuna kadar açılan dava da aynı sonucu doğurur.</div>';
+      msg = 'Merhaba, desehukuk.com kira artış aracını kullandım. Kira ilişkisi beş yılı dolduğu için kira tespiti konusunda görüşmek istiyorum. Mevcut kira: '+tl.format(kira)+', yenileme: '+fmtDate(tarih)+'.';
+      h += waBtn(msg,'Kira tespiti için bize yazın');
+    } else {
+      msg = 'Merhaba, desehukuk.com kira artış aracını kullandım. Mevcut kira: '+tl.format(kira)+', yenileme: '+fmtDate(tarih)+', azami artış %'+pf.format(oran)+', yeni azami kira: '+tl.format(yeni)+'. Kira konusunda görüşmek istiyorum.';
+      h += waBtn(msg);
+    }
+    res.innerHTML = h;
+  });
+})();
+</script>
+</body>
+</html>

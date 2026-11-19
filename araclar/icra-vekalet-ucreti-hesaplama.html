@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>İcra Vekalet Ücreti Hesaplama 2026-2027 (Güncel AAÜT) | DESE Hukuk</title>
+<meta name="description" content="İcra takiplerinde avukatlık ücretini 03.11.2026 tarihli güncel Avukatlık Asgari Ücret Tarifesine göre hesaplayın: nispi dilimler, 78.125 TL sınırı, maktu ücret, tahliye takibi ve süresinde ödeme indirimi.">
+<link rel="canonical" href="https://desehukuk.com/araclar/icra-vekalet-ucreti-hesaplama.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://desehukuk.com/araclar/icra-vekalet-ucreti-hesaplama.html">
+<meta property="og:title" content="İcra Vekalet Ücreti Hesaplama (2026-2027 AAÜT)">
+<meta property="og:description" content="Güncel tarifeye göre icra takibi avukatlık ücretini dilim dilim hesaplayın.">
+<meta property="og:image" content="https://desehukuk.com/assets/img/tokmak-kitap.jpg">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="DESE Hukuk ve Danışmanlık">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/sayfa.css">
+<link rel="stylesheet" href="/assets/araclar.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"İcra Vekalet Ücreti Hesaplama","url":"https://desehukuk.com/araclar/icra-vekalet-ucreti-hesaplama.html","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"tr","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"publisher":{"@type":"LegalService","name":"DESE Hukuk ve Danışmanlık","url":"https://desehukuk.com/"}}</script>
+</head>
+<body>
+<header><div class="wrap">
+  <a href="/" class="logo" aria-label="DESE Hukuk ve Danışmanlık"><span class="wm"><b>DESE</b><small>Hukuk ve Danışmanlık</small></span></a>
+  <div class="hr"><a href="/araclar/" class="back">← Hesaplama araçları</a></div>
+</div></header>
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">İcra Hukuku · Hesaplama Aracı</div>
+  <h1>İcra Vekalet Ücreti Hesaplama</h1>
+  <div class="meta" id="kunye"></div>
+</div></div>
+
+<main class="tool"><div class="wrap">
+
+<form class="calc" id="f" novalidate>
+  <div class="row">
+    <div class="f">
+      <label for="tur">Takip türü</label>
+      <select id="tur">
+        <option value="para">Para alacağı (ilamsız, ilamlı, kambiyo)</option>
+        <option value="tahliye">Tahliyeye ilişkin icra takibi</option>
+      </select>
+    </div>
+    <div class="f" id="tutarAlan">
+      <label for="tutar">Takip tutarı (TL)</label>
+      <input type="text" id="tutar" inputmode="decimal" autocomplete="off" placeholder="Örn. 250.000">
+      <div class="hint">Takip talebindeki toplam alacak (asıl alacak ve işlemiş faiz).</div>
+    </div>
+  </div>
+  <label class="chk"><input type="checkbox" id="odedi"> Borçlu, ödeme süresi içinde borcunu ödedi</label>
+  <button type="submit">Hesapla</button>
+
+  <div class="res" id="res" aria-live="polite"></div>
+</form>
+
+<h2>İcra takibinde avukatlık ücreti nasıl belirlenir?</h2>
+<p>İcra dairelerindeki takiplerde avukatlık ücreti, takip sonuçlanıncaya kadar yapılan bütün işlemlerin karşılığıdır. Konusu para olan takiplerde ücret, tarifenin üçüncü kısmındaki dilimlere göre hesaplanır: her oran yalnızca o dilime düşen tutara uygulanır ve sonuçlar toplanır.</p>
+<p>Küçük takipler için ayrı bir kural vardır. Takip miktarı <span id="sinirTxt"></span> TL'ye kadar olan takiplerde ücret, icra daireleri için öngörülen <span id="maktuTxt"></span> TL maktu ücrettir; bu ücret takipte kesinleşen miktarı geçemez. Tahliyeye ilişkin icra takiplerinde ise takip tutarına bakılmaksızın <span id="tahliyeTxt"></span> TL maktu ücret uygulanır.</p>
+<p>Borçlu ödeme süresi içinde borcunu öderse ücretin dörtte üçü takdir edilir. Bu indirim maktu ücretli takiplerde de uygulanır. Aciz belgesi alınması takibi sonuçlandıran işlemlerden sayıldığından bu durumda tam ücret ödenir.</p>
+
+<h2>Nispi ücret dilimleri</h2>
+<div class="tbl-wrap"><table id="dilimTbl"><thead><tr><th>Dilim</th><th class="n">Tutar</th><th class="n">Oran</th></tr></thead><tbody></tbody></table></div>
+
+<h2>İcra mahkemelerinde ücret</h2>
+<p>İcra mahkemesinde duruşma yapılırsa ayrıca avukatlık ücretine hükmedilir. Tarifeye göre icra mahkemelerinde takip edilen işler için <span id="imIs"></span> TL, dava ve duruşmalı işler için <span id="imDava"></span> TL maktu ücret öngörülmüştür; bu işlerde nispi hesap bu tutarları geçemez. İstihkak davalarında ise nispi ücret uygulanır.</p>
+
+<div class="cta">İcra takibinizi başlatmak, borca itiraz etmek veya ücret konusunda görüş almak için bize ulaşın.<br><a href="https://wa.me/905064933573?text=Merhaba%2C%20icra%20takibi%20konusunda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum." target="_blank" rel="noopener">WhatsApp ile yazın</a></div>
+
+<p class="disc">Bu araç, Avukatlık Asgari Ücret Tarifesine göre karşı tarafa yükletilecek asgari ücreti genel bilgilendirme amacıyla hesaplar. Avukat ile müvekkil arasındaki ücret ayrıca sözleşmeyle belirlenir ve tarifenin altında olamaz. Ücret, hukuki yardımın tamamlandığı tarihte yürürlükte olan tarifeye göre belirlenir; önceki tarihli işlerde sonuç farklı olabilir. Sonuç hukuki mütalaa niteliği taşımaz.</p>
+
+</div></main>
+
+<footer><div class="wrap">
+  <span>© 2026 DESE Hukuk ve Danışmanlık · <a href="/">desehukuk.com</a> · <a href="/kvkk.html">KVKK Aydınlatma Metni</a> · <a href="/cerez-politikasi.html">Çerez Politikası</a></span>
+  <span>Hesaplama araçları genel bilgilendirme amaçlıdır; belirli bir uyuşmazlığa ilişkin hukuki mütalaa niteliği taşımaz ve avukat-müvekkil ilişkisi kurmaz.</span>
+</div></footer>
+<a class="wa" href="https://wa.me/905064933573?text=Merhaba%2C%20desehukuk.com%20%C3%BCzerinden%20ula%C5%9F%C4%B1yorum." target="_blank" rel="noopener" aria-label="WhatsApp ile yazın"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<script src="/assets/veri/oranlar.js"></script>
+<script>
+(function(){
+  var A = window.DESE_VERI.aaut;
+  var tl = new Intl.NumberFormat('tr-TR',{style:'currency',currency:'TRY',minimumFractionDigits:2});
+  var nf = new Intl.NumberFormat('tr-TR',{maximumFractionDigits:0});
+  function $(id){return document.getElementById(id);}
+  function parse(s){
+    s = String(s||'').replace(/\s|TL|₺/gi,'');
+    if(!s) return NaN;
+    if(s.indexOf(',')>-1){ s = s.replace(/\./g,'').replace(',','.'); }
+    else if(/^\d{1,3}(\.\d{3})+$/.test(s)){ s = s.replace(/\./g,''); }
+    return parseFloat(s);
+  }
+  function fmtDate(iso){var p=iso.split('-');return p[2]+'.'+p[1]+'.'+p[0];}
+
+  $('kunye').textContent = A.kunye;
+  $('sinirTxt').textContent = nf.format(A.icraMaktuSinir);
+  $('maktuTxt').textContent = nf.format(A.icraMaktu);
+  $('tahliyeTxt').textContent = nf.format(A.tahliyeMaktu);
+  $('imIs').textContent = nf.format(A.icraMahkemesiIs);
+  $('imDava').textContent = nf.format(A.icraMahkemesiDava);
+
+  var tb = $('dilimTbl').tBodies[0], cum = 0;
+  A.dilimler.forEach(function(d,i){
+    var tr = document.createElement('tr');
+    var label = d[0]===Infinity ? nf.format(cum)+' TL\'den yukarısı' : (i===0?'İlk ':'Sonra gelen ')+nf.format(d[0])+' TL';
+    tr.innerHTML = '<td>'+(i+1)+'</td><td class="n">'+label+'</td><td class="n">%'+d[1]+'</td>';
+    tb.appendChild(tr); if(d[0]!==Infinity) cum += d[0];
+  });
+
+  function nispi(t){
+    var kalan=t, top=0, rows=[];
+    for(var i=0;i<A.dilimler.length && kalan>0;i++){
+      var d=A.dilimler[i], m=Math.min(kalan,d[0]), u=m*d[1]/100;
+      rows.push([m,d[1],u]); top+=u; kalan-=m;
+    }
+    return {top:top,rows:rows};
+  }
+
+  $('tur').addEventListener('change',function(){
+    $('tutarAlan').style.visibility = this.value==='tahliye' ? 'hidden' : 'visible';
+  });
+
+  $('f').addEventListener('submit',function(e){
+    e.preventDefault();
+    var tur=$('tur').value, odedi=$('odedi').checked, res=$('res'), h='', ucret, aciklama='', tutar=0;
+    if(tur==='tahliye'){
+      ucret = A.tahliyeMaktu;
+      aciklama = 'Tahliyeye ilişkin icra takibi için maktu ücret uygulanır.';
+    } else {
+      tutar = parse($('tutar').value);
+      if(!(tutar>0)){ res.className='res on'; res.innerHTML='<div class="warn red">Lütfen geçerli bir takip tutarı girin.</div>'; return; }
+      if(tutar <= A.icraMaktuSinir){
+        ucret = Math.min(A.icraMaktu, tutar);
+        aciklama = 'Takip tutarı '+nf.format(A.icraMaktuSinir)+' TL\'yi aşmadığı için maktu ücret uygulanır'+(tutar<A.icraMaktu?'; ücret takipte kesinleşen miktarı geçemeyeceğinden takip tutarıyla sınırlandı':'')+'.';
+      } else {
+        var n = nispi(tutar); ucret = n.top;
+        aciklama = 'Takip tutarı '+nf.format(A.icraMaktuSinir)+' TL\'yi aştığı için nispi dilimler uygulanır.';
+        h += '<div class="tbl-wrap"><table><thead><tr><th>Dilime düşen tutar</th><th class="n">Oran</th><th class="n">Ücret</th></tr></thead><tbody>';
+        n.rows.forEach(function(r){ h += '<tr><td>'+tl.format(r[0])+'</td><td class="n">%'+r[1]+'</td><td class="n">'+tl.format(r[2])+'</td></tr>'; });
+        h += '<tr><th>Toplam</th><th></th><th class="n">'+tl.format(n.top)+'</th></tr></tbody></table></div>';
+      }
+    }
+    var son = odedi ? ucret*0.75 : ucret;
+    var top = '<div class="big"><div class="main"><span>Avukatlık ücreti</span><b>'+tl.format(son)+'</b></div>'
+      + (odedi ? '<div><span>Tam ücret</span><b>'+tl.format(ucret)+'</b></div>' : '')
+      + (tutar ? '<div><span>Takip tutarı</span><b>'+tl.format(tutar)+'</b></div>' : '') + '</div>';
+    var notlar = '<p style="font-size:15px">'+aciklama+(odedi?' Borçlu ödeme süresi içinde ödediği için ücretin dörtte üçü alındı (AAÜT m.11/4).':'')+'</p>';
+    var msg = 'Merhaba, desehukuk.com icra vekalet ücreti aracını kullandım. '
+      + (tur==='tahliye' ? 'Tahliye takibi' : 'Takip tutarı: '+tl.format(tutar)) + ', hesaplanan ücret: '+tl.format(son)+'. İcra takibi konusunda görüşmek istiyorum.';
+    var wa = '<a class="send" href="https://wa.me/905064933573?text='+encodeURIComponent(msg)+'" target="_blank" rel="noopener">Bu sonuçla bize WhatsApp\'tan yazın</a>';
+    res.className='res on';
+    res.innerHTML = top + notlar + h + '<p style="font-size:13px;color:var(--muted)">Tarife: '+A.kunye+'. Yürürlük: '+fmtDate(A.yururluk)+'.</p>' + wa;
+  });
+})();
+</script>
+</body>
+</html>
