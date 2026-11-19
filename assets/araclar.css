@@ -47,3 +47,16 @@
 article .kunye table{margin:6px 0 0}
 article .kunye th{width:32%;white-space:nowrap}
 @media(max-width:520px){article .kunye th{white-space:normal}}
+/* künye: lacivert kart */
+article .kunye-kart{position:relative;overflow:hidden;background:linear-gradient(135deg,#0f2240,#1a3a66);color:#fff;border-radius:14px;padding:28px 30px;margin:0 0 34px;box-shadow:0 18px 40px rgba(15,34,64,.22)}
+article .kunye-kart:after{content:"§";position:absolute;right:22px;top:-18px;font-family:"Cormorant Garamond",Georgia,serif;font-size:150px;line-height:1;color:rgba(214,180,131,.12);pointer-events:none}
+article .kunye-kart .ust{font-size:11px;letter-spacing:.22em;color:var(--gold2);font-weight:600}
+article .kunye-kart h4{font-family:"Cormorant Garamond",Georgia,serif;font-size:28px;font-weight:600;line-height:1.2;margin:6px 0 22px;color:#fff;position:relative;z-index:1}
+article .kunye-kart .g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;position:relative;z-index:1}
+article .kunye-kart .g div{border-left:1px solid rgba(214,180,131,.45);padding-left:14px}
+article .kunye-kart span{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+article .kunye-kart strong{display:block;font-size:17px;font-weight:600;margin-top:4px;color:#fff;font-variant-numeric:tabular-nums}
+article .kunye-kart .alt{display:flex;justify-content:flex-end;margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);position:relative;z-index:1}
+article .kunye-kart .alt a{font-size:13px!important;font-weight:600;color:var(--navy);background:var(--gold2);padding:9px 16px;border-radius:8px;text-decoration:none}
+article .kunye-kart .alt a:hover{background:#e6c99a}
+@media(max-width:520px){article .kunye-kart{padding:22px 20px}article .kunye-kart h4{font-size:24px}article .kunye-kart .g{gap:10px}article .kunye-kart .g div{padding-left:10px}article .kunye-kart strong{font-size:15px}}

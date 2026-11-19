@@ -7,7 +7,7 @@ KARARLAR = [
  "alan": "Aile Hukuku",
  "img": "aile-tokmak.jpg",
  "yayin": "2026-11-20",
- "baslik": "Eşinizin rızası olmadan satılan aile konutu geri alınabilir, tapuda şerh olmasa bile",
+ "baslik": "Tapuda aile konutu şerhi olmasa bile eşinizin rızası olmadan satılan aile konutu geri alınabilir.",
  "aciklama": "Yargıtay Hukuk Genel Kurulu: Aile konutu eşin açık rızası olmadan devredilemez. Akraba ve iş ilişkisi olan, evi görmeden ipotekli satın alan kişi iyi niyetli sayılmaz.",
  "kunye": {"mahkeme": "Yargıtay Hukuk Genel Kurulu", "esas": "2025/373", "karar": "2026/257", "tarih": "15.04.2026", "sonuc": "Direnme kararının bozulması, oy birliği, kesin", "id": "1228735300"},
  "olay": [
@@ -36,8 +36,8 @@ KARARLAR = [
  "slug": "maasi-odenmeyen-isci-kidem-tazminati",
  "alan": "İş Hukuku",
  "img": "sozlesme-tokalasma.jpg",
- "yayin": "2026-11-21",
- "baslik": "Maaşı geç ya da eksik ödenen işçi, işten ayrılsa da kıdem tazminatı alır",
+ "yayin": "2026-11-23",
+ "baslik": "Maaşı geç ya da eksik ödenen işçi, işten kendisi ayrılsa da kıdem tazminatı alır.",
  "aciklama": "Yargıtay 9. Hukuk Dairesi: Ücretlerinin ödenmemesi nedeniyle iş sözleşmesini fesheden işçi haklı nedenle feshetmiş sayılır ve kıdem tazminatına hak kazanır.",
  "kunye": {"mahkeme": "Yargıtay 9. Hukuk Dairesi", "esas": "2026/1145", "karar": "2026/3530", "tarih": "20.04.2026", "sonuc": "Onama, oy birliği", "id": "1223222600"},
  "olay": [
@@ -64,8 +64,8 @@ KARARLAR = [
  "slug": "ihtiyac-tahliye-arabuluculuk-erken-basvuru",
  "alan": "Kira Hukuku",
  "img": "ev-anahtar.jpg",
- "yayin": "2026-11-22",
- "baslik": "Ev sahipleri dikkat: İhtiyaç nedeniyle tahliyede arabulucuya erken başvurmak davayı kaybettirir",
+ "yayin": "2026-11-25",
+ "baslik": "Ev sahipleri dikkat: İhtiyaç nedeniyle tahliyede arabulucuya erken başvurmak davayı kaybettirebilir.",
  "aciklama": "Yargıtay 3. Hukuk Dairesi uyuşmazlığı giderdi: İhtiyaç nedeniyle tahliye davasında zorunlu arabuluculuk başvurusu, dava açma hakkı doğduktan sonra yapılmalıdır.",
  "kunye": {"mahkeme": "Yargıtay 3. Hukuk Dairesi (bölge adliye mahkemeleri arasındaki uyuşmazlığın giderilmesi)", "esas": "2025/1495", "karar": "2025/3048", "tarih": "26.05.2025", "sonuc": "Uyuşmazlığın giderilmesi, oy birliği, kesin", "id": "1155987500"},
  "olay": [
@@ -93,8 +93,8 @@ KARARLAR = [
  "slug": "bosanma-emoji-gizli-ses-kaydi-delil",
  "alan": "Aile Hukuku",
  "img": "terazi-kitap.jpg",
- "yayin": "2026-11-23",
- "baslik": "Bir fenomene kalp emojisi göndermek aldatma sayılmaz; gizli ses kaydı da boşanmada delil olmaz",
+ "yayin": "2026-11-27",
+ "baslik": "Bir fenomene kalp emojisi göndermek güven sarsıcı davranış sayılmaz; gizli ses kaydı da boşanmada delil olmaz.",
  "aciklama": "Yargıtay 2. Hukuk Dairesi: Sosyal medya fenomenine beğeni amaçlı emoji güven sarsıcı davranış değildir; ortam dinlemesiyle elde edilen ses kaydı hukuka aykırı delildir.",
  "kunye": {"mahkeme": "Yargıtay 2. Hukuk Dairesi", "esas": "2025/5186", "karar": "2025/7559", "tarih": "18.09.2025", "sonuc": "Kusur belirlemesi yönünden bozma, oy birliği", "id": "1180133100"},
  "olay": [
@@ -122,21 +122,21 @@ KARARLAR = [
  "slug": "trafik-kazasi-arac-deger-kaybi",
  "alan": "Tazminat Hukuku",
  "img": "tokmak-kitaplar.jpg",
- "yayin": "2026-11-24",
- "baslik": "Kazada aracınız değer kaybettiyse: Ehliyetinize el konulmuş olması bile tazminatı engellemez",
- "aciklama": "Yargıtay 4. Hukuk Dairesi: Araç değer kaybı belirsiz alacak davasıyla istenebilir; aracı kullanmayan malikin ehliyetine el konulmuş olması zararın tazminine engel değildir.",
+ "yayin": "2026-11-30",
+ "baslik": "Kazada aracınız değer kaybettiyse: Ehliyetinize el konulmuş olması ya da kaza sırasında aracınızı 3. kişinin kullanıyor olması maddi zarar tazminine engel değildir.",
+ "aciklama": "Yargıtay 4. Hukuk Dairesi: Araç malikinin ehliyetine geçici olarak el konulmuş olması ve kaza sırasında aracı üçüncü bir kişinin kullanıyor olması, maddi zararın tazminine engel değildir.",
  "kunye": {"mahkeme": "Yargıtay 4. Hukuk Dairesi", "esas": "2025/8637", "karar": "2025/14493", "tarih": "22.10.2025", "sonuc": "Kanun yararına bozma, oy birliği", "id": "1190121700"},
  "olay": [
-  "Aracı eşi tarafından kullanılırken, karşı tarafın birinci derecede kusurlu olduğu bir trafik kazasında hasar gören araç maliki; değer kaybı ve araç kullanılamadığı dönem için mahrumiyet bedeli talebiyle belirsiz alacak davası açtı.",
-  "İlk derece mahkemesi, bu taleplerin belirsiz alacak davasına konu olamayacağı ve araç malikinin kaza tarihinde sürücü belgesine el konulmuş olduğu gerekçesiyle davayı kesin olarak reddetti. Adalet Bakanlığı kararın kanun yararına bozulmasını istedi."
+  "Bir aracın maliki, kaza tarihinde sürücü belgesine geçici olarak el konulmuş durumdaydı ve aracı o sırada eşi kullanıyordu. Karşı tarafın birinci derecede kusurlu olduğu kazada araç hasar gördü; malik, değer kaybı ile aracın kullanılamadığı dönem için mahrumiyet bedeli talebiyle dava açtı.",
+  "İlk derece mahkemesi, araç malikinin kaza tarihinde geçerli bir sürücü belgesi bulunmadığını da gerekçe yaparak davayı kesin olarak reddetti. Adalet Bakanlığı kararın kanun yararına bozulmasını istedi."
  ],
  "alinti": [
-  "Araçta meydana gelen değer kaybı, aracın serbest piyasa koşullarına göre kaza tarihi itibarıyla önceki kazaları araştırılarak ve niteliği ve etkisi göz önüne alınarak aracın ikinci el rayiç değeri ile yaşı, özellikleri, hasar miktarı ve hasarlı kısımların özelliği dikkate alınarak kazadan sonraki tamir edilmiş halinin rayiç değeri tespit edilip bu iki miktar arasındaki azalmaya göre hesaplanması gerekir.",
-  "Kaza sırasında aracı kullanan kişinin araç maliki olan davacı olmaması nedeniyle davacının sürücü belgesinin geçici olarak geri alınması, uğranılan maddi zararın tazmininin talep edilmesine engel değildir."
+  "Kaza sırasında aracı kullanan kişinin araç maliki olan davacı olmaması nedeniyle davacının sürücü belgesinin geçici olarak geri alınması, uğranılan maddi zararın tazmininin talep edilmesine engel değildir.",
+  "Araçta meydana gelen değer kaybı, aracın serbest piyasa koşullarına göre kaza tarihi itibarıyla önceki kazaları araştırılarak ve niteliği ve etkisi göz önüne alınarak aracın ikinci el rayiç değeri ile yaşı, özellikleri, hasar miktarı ve hasarlı kısımların özelliği dikkate alınarak kazadan sonraki tamir edilmiş halinin rayiç değeri tespit edilip bu iki miktar arasındaki azalmaya göre hesaplanması gerekir."
  ],
  "anlam": [
-  "Kazadan sonra onarılan bir araç, ikinci el piyasada hasar kaydı nedeniyle daha düşük fiyatla alıcı bulur. Yargıtay'ın yerleşik uygulamasına göre bu kayıp; aracın kaza tarihindeki hasarsız ikinci el değeri ile onarıldıktan sonraki değeri arasındaki farktır. Hesaplamada aracın önceki kazaları da araştırılır ve bunların etkisi göz önünde tutulur. Aracın onarım süresince kullanılamamasından doğan mahrumiyet zararı da, aynı nitelikteki bir aracın makul onarım süresi boyunca kiralanma bedeli üzerinden hesaplanır.",
-  "Bu zararlar teknik bilirkişi incelemesi gerektirdiğinden, araç sahibinin dava açarken tutarı kesin olarak bilmesi beklenemez; bu yüzden belirsiz alacak davası açılabilir. Kararın kanun yararına verildiğini ve dosyadaki sonucu değiştirmediğini belirtmek gerekir; ancak Yargıtay'ın bu konudaki çizgisini açıkça ortaya koymaktadır."
+  "Trafik kazasında aracı zarar gören kişinin tazminat hakkı, araç malikliğinden doğar. Kazada kusuru olmayan bir aracın sahibi, o sırada aracı kendisi kullanmasa ve sürücü belgesine geçici olarak el konulmuş olsa bile, kusurlu taraftan ve sigortacısından aracındaki zararı isteyebilir. Malikin ehliyetinin bulunmaması, aracın onun tarafından kullanılmadığı bir kazada zararla illiyet bağı kurmaz; dolayısıyla tazminatı ortadan kaldırmaz.",
+  "Yargıtay aynı kararda değer kaybının nasıl hesaplanacağını da hatırlattı: Aracın kaza tarihindeki hasarsız ikinci el değeri ile onarıldıktan sonraki değeri arasındaki fark değer kaybıdır; aracın önceki kazaları da araştırılarak etkileri hesaba katılır. Aracın onarım süresince kullanılamamasından doğan mahrumiyet zararı ise aynı nitelikteki bir aracın makul onarım süresi boyunca kiralanma bedeli üzerinden belirlenir. Kararın kanun yararına verildiğini ve dosyadaki sonucu değiştirmediğini belirtmek gerekir; ancak Yargıtay'ın bu konudaki çizgisini açıkça ortaya koymaktadır."
  ],
  "dikkat": [
   "Dava açmadan önce karşı tarafın zorunlu trafik sigortası şirketine yazılı başvuru yapılması gerekir. Şirket 15 gün içinde cevap vermez veya talep karşılanmazsa dava açılabilir ya da Sigorta Tahkim Komisyonu'na başvurulabilir (Karayolları Trafik Kanunu m.97).",
@@ -151,8 +151,8 @@ KARARLAR = [
  "slug": "uyusturucu-telefon-gorusmesi-tek-basina-delil-degil",
  "alan": "Ceza Hukuku",
  "img": "ceza.jpg",
- "yayin": "2026-11-25",
- "baslik": "Uyuşturucu davalarında yalnızca telefon görüşmelerine dayanılarak mahkûmiyet kurulamaz",
+ "yayin": "2026-12-02",
+ "baslik": "Uyuşturucu ticareti şeklinde atılı suçu oluşturan yargılamalarda, yalnızca telefon görüşmelerine dayanılarak mahkûmiyet kurulamaz.",
  "aciklama": "Yargıtay 10. Ceza Dairesi: Maddi bulgularla desteklenmeyen telefon görüşmeleri, uyuşturucu ticareti suçunda tek başına mahkûmiyet için yeterli değildir.",
  "kunye": {"mahkeme": "Yargıtay 10. Ceza Dairesi", "esas": "2025/1455", "karar": "2025/10287", "tarih": "21.10.2025", "sonuc": "Bir kısım sanıklar yönünden oy birliğiyle bozma", "id": "1181059400"},
  "olay": [
@@ -179,8 +179,8 @@ KARARLAR = [
  "slug": "muris-muvazaasi-her-satis-mal-kacirma-degil",
  "alan": "Miras Hukuku",
  "img": "tapu-tokmak.jpg",
- "yayin": "2026-11-26",
- "baslik": "Babanın oğullarına yaptığı her tapu satışı mirastan mal kaçırma sayılmaz",
+ "yayin": "2026-12-04",
+ "baslik": "Babanın oğullarına yaptığı her tapu satışı mirastan mal kaçırma sayılmaz.",
  "aciklama": "Yargıtay 1. Hukuk Dairesi: Muris muvazaasında belirleyici olan mirasbırakanın gerçek amacıdır. Emek ve bakım karşılığı yapılan devir, mal kaçırma amacı taşımıyorsa iptal edilmez.",
  "kunye": {"mahkeme": "Yargıtay 1. Hukuk Dairesi", "esas": "2023/317", "karar": "2023/3246", "tarih": "13.06.2023", "sonuc": "Onama, oy birliği, kesin", "id": "935851400"},
  "olay": [

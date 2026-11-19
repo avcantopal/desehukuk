@@ -76,19 +76,15 @@ def sayfa(k):
 <div class="wrap">
   <div class="eyebrow">Karar Bülteni · {e(k['alan'])}</div>
   <h1>{e(k['baslik'])}</h1>
-  <div class="meta">{tarih_tr(k['yayin'])} · {e(kn['mahkeme'].split(' (')[0])}</div>
+  <div class="meta">{e(kn['mahkeme'].split(' (')[0])}</div>
 </div></div>
 <article><div class="wrap">
 
-<div class="box kunye">
-<h3>Karar künyesi</h3>
-<table>
-<tr><th>Mahkeme</th><td>{e(kn['mahkeme'])}</td></tr>
-<tr><th>Esas / Karar</th><td>{kn['esas']} E. · {kn['karar']} K.</td></tr>
-<tr><th>Karar tarihi</th><td>{kn['tarih']}</td></tr>
-<tr><th>Sonuç</th><td>{e(kn['sonuc'])}</td></tr>
-<tr><th>Resmi metin</th><td><a href="{kaynak}" target="_blank" rel="noopener">mevzuat.adalet.gov.tr</a></td></tr>
-</table>
+<div class="kunye-kart">
+<div class="ust">KARAR KÜNYESİ</div>
+<h4>{e(kn['mahkeme'].split(' (')[0])}</h4>
+<div class="g"><div><span>Esas</span><strong>{kn['esas']}</strong></div><div><span>Karar</span><strong>{kn['karar']}</strong></div><div><span>Tarih</span><strong>{kn['tarih']}</strong></div></div>
+<div class="alt"><a href="{kaynak}" target="_blank" rel="noopener">Resmi metin ↗</a></div>
 </div>
 
 <h2>Olay</h2>''')
@@ -161,7 +157,7 @@ def index():
   var secili='Tümü';
   function ciz(){{
     var h='';L.filter(function(k){{return secili==='Tümü'||k.alan===secili;}}).forEach(function(k){{
-      h+='<a class="tcard" href="/kararlar/'+k.slug+'.html'+(on?'?onizleme':'')+'"><span>'+k.alan+' · '+tr(k.yayin)+'</span><b>'+k.baslik+'</b><em>'+k.mahkeme+', '+k.tarih+'</em></a>';
+      h+='<a class="tcard" href="/kararlar/'+k.slug+'.html'+(on?'?onizleme':'')+'"><span>'+k.alan+'</span><b>'+k.baslik+'</b><em>'+k.mahkeme+'</em></a>';
     }});
     document.getElementById('liste').innerHTML=h||'<p>İlk kararlar çok yakında burada.</p>';
     document.getElementById('filtre').innerHTML=alanlar.length>2?alanlar.map(function(a){{return '<button type="button" class="'+(a===secili?'on':'')+'" data-a="'+a+'">'+a+'</button>';}}).join(''):'';
