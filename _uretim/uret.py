@@ -76,7 +76,6 @@ def sayfa(k):
 <div class="wrap">
   <div class="eyebrow">Karar Bülteni · {e(k['alan'])}</div>
   <h1>{e(k['baslik'])}</h1>
-  <div class="meta">{e(kn['mahkeme'].split(' (')[0])}</div>
 </div></div>
 <article><div class="wrap">
 
@@ -119,13 +118,13 @@ def index():
 <html lang="tr">
 <head>
 {HEAD.format(robots=ROBOTS)}
-<title>Karar Bülteni: Yargıtay'ın Yerleşik Kararları | DESE Hukuk</title>
-<meta name="description" content="Kira, iş, aile, miras, tazminat ve ceza hukukunda vatandaşı doğrudan ilgilendiren yerleşik Yargıtay kararları; sade özet ve değerlendirmeyle.">
+<title>Karar Bülteni: Hukuk Gündemi | DESE Hukuk</title>
+<meta name="description" content="Yargı kararlarının perde arkasını, ne anlama geldiğini ve uygulamaya etkisini sade bir dille inceliyoruz.">
 <link rel="canonical" href="https://desehukuk.com/kararlar/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://desehukuk.com/kararlar/">
 <meta property="og:title" content="Karar Bülteni | DESE Hukuk">
-<meta property="og:description" content="Vatandaşı doğrudan ilgilendiren yerleşik Yargıtay kararları, sade dille.">
+<meta property="og:description" content="Yargı kararlarının perde arkasını, ne anlama geldiğini ve uygulamaya etkisini sade bir dille inceliyoruz.">
 <meta property="og:image" content="https://desehukuk.com/assets/img/mahkeme-terazi.jpg">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:site_name" content="DESE Hukuk ve Danışmanlık">
@@ -137,8 +136,8 @@ def index():
 </div></header>
 <div class="hero"><div class="wrap">
   <div class="eyebrow">Karar Bülteni</div>
-  <h1>Yargıtay'ın Yerleşik Kararları</h1>
-  <div class="meta">Vatandaşı doğrudan ilgilendiren kararlar, sade özet ve değerlendirmeyle</div>
+  <h1>Hukuk Gündemi</h1>
+  <div class="meta">Yargı kararlarının perde arkasını, ne anlama geldiğini ve uygulamaya etkisini sade bir dille inceliyoruz.</div>
 </div></div>
 <main class="tool"><div class="wrap">
 <div class="filtre" id="filtre"></div>
@@ -157,7 +156,7 @@ def index():
   var secili='Tümü';
   function ciz(){{
     var h='';L.filter(function(k){{return secili==='Tümü'||k.alan===secili;}}).forEach(function(k){{
-      h+='<a class="tcard" href="/kararlar/'+k.slug+'.html'+(on?'?onizleme':'')+'"><span>'+k.alan+'</span><b>'+k.baslik+'</b><em>'+k.mahkeme+'</em></a>';
+      h+='<a class="tcard" href="/kararlar/'+k.slug+'.html'+(on?'?onizleme':'')+'"><span>'+k.alan+'</span><b>'+k.baslik+'</b></a>';
     }});
     document.getElementById('liste').innerHTML=h||'<p>İlk kararlar çok yakında burada.</p>';
     document.getElementById('filtre').innerHTML=alanlar.length>2?alanlar.map(function(a){{return '<button type="button" class="'+(a===secili?'on':'')+'" data-a="'+a+'">'+a+'</button>';}}).join(''):'';
