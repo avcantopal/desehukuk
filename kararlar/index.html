@@ -53,7 +53,7 @@
   var secili='Tümü';
   function ciz(){
     var h='';L.filter(function(k){return secili==='Tümü'||k.alan===secili;}).forEach(function(k){
-      h+='<a class="tcard" href="/kararlar/'+k.slug+'.html'+(on?'?onizleme':'')+'"><span>'+k.alan+'</span><b>'+k.baslik+'</b><em>'+k.mahkeme+'</em></a>';
+      h+='<a class="tcard" href="/kararlar/'+k.slug+'.html'+(on?'?onizleme':'')+'"><span>'+k.alan+'</span><b>'+k.baslik+'</b></a>';
     });
     document.getElementById('liste').innerHTML=h||'<p>İlk kararlar çok yakında burada.</p>';
     document.getElementById('filtre').innerHTML=alanlar.length>2?alanlar.map(function(a){return '<button type="button" class="'+(a===secili?'on':'')+'" data-a="'+a+'">'+a+'</button>';}).join(''):'';
