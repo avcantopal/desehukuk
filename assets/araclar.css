@@ -39,3 +39,11 @@
 .tcard.soon{opacity:.6;pointer-events:none}
 .disc{font-size:13px;color:var(--muted);line-height:1.6;margin-top:30px;border-top:1px solid var(--line);padding-top:16px}
 @media(max-width:640px){.calc{padding:22px 18px}.calc .row,.tools{grid-template-columns:1fr;gap:0}.tools{gap:14px}.big b{font-size:26px}}
+/* karar bülteni */
+.filtre{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+.filtre button{font:inherit;font-size:13px;font-weight:500;color:var(--navy);background:#fff;border:1px solid var(--line);padding:7px 14px;cursor:pointer}
+.filtre button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.kl .tcard b{font-size:23px}
+article .kunye table{margin:6px 0 0}
+article .kunye th{width:32%;white-space:nowrap}
+@media(max-width:520px){article .kunye th{white-space:normal}}
