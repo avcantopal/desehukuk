@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>Süre Hesaplama: İtiraz, Cevap, İstinaf, Temyiz, İşe İade | DESE Hukuk</title>
+<meta name="description" content="İlamsız icra takibine itiraz, cevap dilekçesi, işe iade, ceza istinaf ve temyiz sürelerinin son gününü hafta sonu, resmi tatil, bayram ve adli tatili dikkate alarak hesaplayın.">
+<link rel="canonical" href="https://desehukuk.com/araclar/sure-hesaplama.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://desehukuk.com/araclar/sure-hesaplama.html">
+<meta property="og:title" content="Hukuki Süre Hesaplama (Tatiller ve Adli Tatil Dahil)">
+<meta property="og:description" content="Sürenizin son gününü bayramlar ve adli tatil dahil hesaplayın.">
+<meta property="og:image" content="https://desehukuk.com/assets/img/tokmak-gozluk.jpg">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="DESE Hukuk ve Danışmanlık">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/sayfa.css">
+<link rel="stylesheet" href="/assets/araclar.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Hukuki Süre Hesaplama","url":"https://desehukuk.com/araclar/sure-hesaplama.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","inLanguage":"tr","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"publisher":{"@type":"LegalService","name":"DESE Hukuk ve Danışmanlık","url":"https://desehukuk.com/"}}</script>
+</head>
+<body>
+<header><div class="wrap">
+  <a href="/" class="logo" aria-label="DESE Hukuk ve Danışmanlık"><span class="wm"><b>DESE</b><small>Hukuk ve Danışmanlık</small></span></a>
+  <div class="hr"><a href="/araclar/" class="back">← Hesaplama araçları</a></div>
+</div></header>
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Usul Hukuku · Hesaplama Aracı</div>
+  <h1>Süre Hesaplama</h1>
+  <div class="meta">Hafta sonu, resmi tatil, dini bayram ve adli tatil dahil</div>
+</div></div>
+
+<main class="tool"><div class="wrap">
+
+<form class="calc" id="f" novalidate>
+  <div class="f">
+    <label for="tur">Süre</label>
+    <select id="tur">
+      <option value="itiraz">İlamsız icra takibine (ödeme emrine) itiraz · 7 gün</option>
+      <option value="cevap">Cevap dilekçesi · 2 hafta</option>
+      <option value="iadeArb">İşe iade: arabulucuya başvuru · 1 ay</option>
+      <option value="iadeDava">İşe iade: dava açma · 2 hafta</option>
+      <option value="istinaf">Ceza: istinaf · 2 hafta</option>
+      <option value="temyiz">Ceza: temyiz · 2 hafta</option>
+    </select>
+  </div>
+  <div class="row">
+    <div class="f">
+      <label for="tarih" id="tarihEt">Tebliğ tarihi</label>
+      <input type="date" id="tarih">
+      <div class="hint" id="tarihHint"></div>
+    </div>
+    <div class="f" style="align-self:end">
+      <label class="chk" id="etebAlan"><input type="checkbox" id="eteb"> Tebligat e-tebligat (UETS) ile geldi; girdiğim tarih adresime ulaştığı tarih</label>
+    </div>
+  </div>
+  <label class="chk" id="istisnaAlan"><input type="checkbox" id="istisna"> <span id="istisnaTxt"></span></label>
+  <button type="submit">Hesapla</button>
+
+  <div class="res" id="res" aria-live="polite"></div>
+</form>
+
+<h2>Süreler nasıl hesaplanır?</h2>
+<p>Gün olarak belirlenen sürelerde tebliğ günü hesaba katılmaz. Hafta, ay veya yıl olarak belirlenen süreler, son hafta, ay veya yılda başladığı güne karşılık gelen günde biter; o ayda karşılık gelen gün yoksa ayın son günü biter (HMK m.92, İİK m.19, CMK m.39). Aradaki tatil günleri süreye dahildir. Yalnızca son gün resmi tatile denk gelirse süre izleyen ilk iş gününe uzar (HMK m.93).</p>
+<p>Hafta sonu, 1 Ocak, 23 Nisan, 1 Mayıs, 19 Mayıs, 15 Temmuz, 30 Ağustos, 29 Ekim ile Ramazan ve Kurban Bayramı günleri tam gün tatildir. 28 Ekim ve bayram arifeleri saat 13.00'ten itibaren yarım gün tatildir (2429 sayılı Kanun). Hükümetin bayramları uzatmak için verdiği idari izin günleri resmi tatil değildir; bu günlerde süreler işlemeye devam eder.</p>
+
+<h2>Adli tatilin etkisi</h2>
+<p>Adli tatil her yıl 20 Temmuz'da başlar, 31 Ağustos'ta biter. Hukuk davalarında, adli tatile tabi işlerde son günü tatile rastlayan süreler tatilin bittiği günden itibaren bir hafta uzar (HMK m.104). İşçinin iş sözleşmesine dayalı davaları, nafaka ve ihtiyati tedbir gibi işler adli tatilde de görüldüğünden bunlarda uzama olmaz (HMK m.103). Ceza işlerinde adli tatile rastlayan süreler tatilin bittiği günden itibaren üç gün uzar (CMK m.331/4); tutuklu işlerde uygulamada bu uzamaya dayanılmamalıdır. Adli tatil, icra dairelerindeki itiraz sürelerini etkilemez.</p>
+
+<h2>E-tebligatta tebliğ tarihi</h2>
+<p>Elektronik tebligat, muhatabın elektronik adresine ulaştığı tarihi izleyen beşinci günün sonunda yapılmış sayılır (Tebligat Kanunu m.7/a). Tebligatı daha önce açmanız bu tarihi öne çekmez. Avukatlar, şirketler ve kamu kurumları için e-tebligat zorunludur.</p>
+
+<div class="cta">Süreniz işliyor ya da kaçırdığınızı düşünüyorsanız vakit kaybetmeden bize ulaşın.<br><a href="https://wa.me/905064933573?text=Merhaba%2C%20s%C3%BCreli%20bir%20i%C5%9Flem%20i%C3%A7in%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum." target="_blank" rel="noopener">WhatsApp ile yazın</a></div>
+
+<p class="disc">Tatil tablosu, 2429 sayılı Kanun ile Diyanet İşleri Başkanlığı'nın yayımladığı resmi tatil listelerine dayanır ve 2035 sonuna kadar olan bayramları içerir. Bu araç genel bilgilendirme amaçlıdır; tebliğin usulsüzlüğü, özel kanun hükümleri ve somut dosyanın koşulları sonucu değiştirebilir. Hak kaybına uğramamak için işlemi son güne bırakmayın. Sonuç hukuki mütalaa niteliği taşımaz.</p>
+
+</div></main>
+
+<footer><div class="wrap">
+  <span>© 2026 DESE Hukuk ve Danışmanlık · <a href="/">desehukuk.com</a> · <a href="/kvkk.html">KVKK Aydınlatma Metni</a> · <a href="/cerez-politikasi.html">Çerez Politikası</a></span>
+  <span>Hesaplama araçları genel bilgilendirme amaçlıdır; belirli bir uyuşmazlığa ilişkin hukuki mütalaa niteliği taşımaz ve avukat-müvekkil ilişkisi kurmaz.</span>
+</div></footer>
+<a class="wa" href="https://wa.me/905064933573?text=Merhaba%2C%20desehukuk.com%20%C3%BCzerinden%20ula%C5%9F%C4%B1yorum." target="_blank" rel="noopener" aria-label="WhatsApp ile yazın"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<script src="/assets/veri/tatiller.js"></script>
+<script>
+(function(){
+  var T = window.DESE_TATIL;
+  var GUN = ['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'];
+  var AY = ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+  var SABIT = {'01-01':'Yılbaşı','04-23':'Ulusal Egemenlik ve Çocuk Bayramı','05-01':'Emek ve Dayanışma Günü','05-19':'Atatürk\'ü Anma, Gençlik ve Spor Bayramı','07-15':'Demokrasi ve Milli Birlik Günü','08-30':'Zafer Bayramı','10-29':'Cumhuriyet Bayramı'};
+  var arefeSet = {}, bayramSet = {};
+  T.arefe.forEach(function(d){arefeSet[d]=1;}); T.bayram.forEach(function(d){bayramSet[d]=1;});
+
+  var TUR = {
+    itiraz:  {ad:'İlamsız icra takibine (ödeme emrine) itiraz', birim:'gun', n:7, adli:null, tatil:'sonraki', eteb:true,
+              et:'Ödeme emrinin tebliğ tarihi', hint:'Ödeme emrinin size tebliğ edildiği gün.', dayanak:'İİK m.62 ve m.19',
+              ek:'İtiraz, takibin yapıldığı veya başka bir icra dairesine dilekçe ya da sözlü beyanla yapılabilir. Borcun bir kısmına itiraz ediliyorsa miktar açıkça gösterilmeli, senet altındaki imza reddediliyorsa bu ayrıca belirtilmelidir.'},
+    cevap:   {ad:'Cevap dilekçesi', birim:'hafta', n:2, adli:'hmk', tatil:'sonraki', eteb:true,
+              et:'Dava dilekçesinin tebliğ tarihi', hint:'Dava dilekçesinin size tebliğ edildiği gün.', dayanak:'HMK m.127, 92, 93 ve 104',
+              ist:'Dava, adli tatilde de görülen işlerden (ör. işçinin açtığı iş davası, nafaka, ihtiyati tedbir)',
+              ek:'Cevap dilekçesinin bu sürede hazırlanması çok zor veya imkansızsa, süre dolmadan mahkemeden bir defaya mahsus ve en fazla bir ay ek süre istenebilir.'},
+    iadeArb: {ad:'İşe iade için arabulucuya başvuru', birim:'ay', n:1, adli:null, tatil:'onceki', eteb:false,
+              et:'Fesih bildiriminin tebliğ tarihi', hint:'İşverenin fesih bildiriminin size ulaştığı gün.', dayanak:'İş Kanunu m.20',
+              ek:'Arabuluculukta anlaşma sağlanamazsa, son tutanağın düzenlendiği tarihten itibaren iki hafta içinde iş mahkemesinde dava açılmalıdır. Bu süreyi "İşe iade: dava açma" seçeneğiyle hesaplayabilirsiniz.'},
+    iadeDava:{ad:'İşe iade davası', birim:'hafta', n:2, adli:null, tatil:'sonraki', eteb:false,
+              et:'Arabuluculuk son tutanağının tarihi', hint:'Anlaşamama tutanağının düzenlendiği gün.', dayanak:'İş Kanunu m.20; HMK m.93 ve 103/1-ç',
+              ek:'İşçinin iş sözleşmesine dayalı davaları adli tatilde de görüldüğünden bu sürede adli tatil uzaması yoktur.'},
+    istinaf: {ad:'Ceza istinaf başvurusu', birim:'hafta', n:2, adli:'cmk', tatil:'sonraki', eteb:true,
+              et:'Gerekçeli hükmün tebliğ tarihi', hint:'Hükmün gerekçesiyle birlikte tebliğ edildiği gün.', dayanak:'CMK m.273, 39 ve 331/4',
+              ist:'Tutuklu iş (adli tatil uzamasından yararlanmadan hesapla)',
+              ek:'Başvuru, hükmü veren mahkemeye dilekçe verilerek veya zabıt katibine beyanda bulunularak yapılır. Tutuklu sanık, bulunduğu yer cezaevi idaresi aracılığıyla da başvurabilir.'},
+    temyiz:  {ad:'Ceza temyiz başvurusu', birim:'hafta', n:2, adli:'cmk', tatil:'sonraki', eteb:true,
+              et:'Gerekçeli hükmün tebliğ tarihi', hint:'Hükmün gerekçesiyle birlikte tebliğ edildiği gün.', dayanak:'CMK m.291, 39 ve 331/4',
+              ist:'Tutuklu iş (adli tatil uzamasından yararlanmadan hesapla)',
+              ek:'Başvuru, hükmü veren mahkemeye dilekçe verilerek veya zabıt katibine beyanda bulunularak yapılır.'}
+  };
+
+  function $(id){return document.getElementById(id);}
+  function D(iso){var p=iso.split('-');return new Date(Date.UTC(+p[0],+p[1]-1,+p[2]));}
+  function I(d){return d.toISOString().slice(0,10);}
+  function add(iso,n){var d=D(iso);d.setUTCDate(d.getUTCDate()+n);return I(d);}
+  function addMonth(iso,n){var d=D(iso),y=d.getUTCFullYear(),m=d.getUTCMonth()+n,g=d.getUTCDate();
+    y+=Math.floor(m/12);m=((m%12)+12)%12;var son=new Date(Date.UTC(y,m+1,0)).getUTCDate();return I(new Date(Date.UTC(y,m,Math.min(g,son))));}
+  function fmt(iso){var d=D(iso);return d.getUTCDate()+' '+AY[d.getUTCMonth()]+' '+d.getUTCFullYear()+' '+GUN[d.getUTCDay()];}
+  function kisa(iso){var p=iso.split('-');return p[2]+'.'+p[1]+'.'+p[0];}
+  function tatil(iso){
+    var md=iso.slice(5), wd=D(iso).getUTCDay();
+    if(SABIT[md]) return {tam:true,ad:SABIT[md]};
+    if(bayramSet[iso]) return {tam:true,ad:'dini bayram'};
+    if(wd===0||wd===6) return {tam:true,ad:GUN[wd]};
+    if(md==='10-28') return {yarim:true,ad:'Cumhuriyet Bayramı arifesi (13.00\'ten itibaren tatil)'};
+    if(arefeSet[iso]) return {yarim:true,ad:'bayram arifesi (13.00\'ten itibaren tatil)'};
+    return {};
+  }
+  function adliMi(iso){var md=iso.slice(5);return md>='07-20' && md<='08-31';}
+
+  function ayarla(){
+    var t=TUR[$('tur').value];
+    $('tarihEt').textContent=t.et; $('tarihHint').textContent=t.hint;
+    $('etebAlan').style.display=t.eteb?'flex':'none'; if(!t.eteb) $('eteb').checked=false;
+    $('istisnaAlan').style.display=t.ist?'flex':'none'; if(!t.ist) $('istisna').checked=false;
+    $('istisnaTxt').textContent=t.ist||'';
+  }
+  $('tur').addEventListener('change',ayarla); ayarla();
+
+  $('f').addEventListener('submit',function(e){
+    e.preventDefault();
+    var key=$('tur').value, t=TUR[key], res=$('res'), giris=$('tarih').value, adim=[], uyari=[];
+    res.className='res on';
+    if(!/^\d{4}-\d{2}-\d{2}$/.test(giris)){res.innerHTML='<div class="warn red">Lütfen tarihi girin.</div>';return;}
+
+    var bas=giris;
+    if(t.eteb && $('eteb').checked){
+      bas=add(giris,5);
+      adim.push('E-tebligat '+kisa(giris)+' tarihinde adresinize ulaştı; izleyen beşinci günün sonunda, <b>'+kisa(bas)+'</b> tarihinde tebliğ edilmiş sayılır (Tebligat K. m.7/a).');
+    }
+    var ham = t.birim==='gun' ? add(bas,t.n) : t.birim==='hafta' ? add(bas,7*t.n) : addMonth(bas,t.n);
+    var birimAd = t.birim==='gun'?'gün':t.birim==='hafta'?'hafta':'ay';
+    adim.push(t.n+' '+birimAd+'lık süre '+kisa(bas)+' tarihinden itibaren işler ve <b>'+kisa(ham)+'</b> ('+GUN[D(ham).getUTCDay()]+') günü dolar.');
+
+    var son=ham, adliUygula = t.adli && !$('istisna').checked;
+    if(t.tatil==='onceki'){
+      var tt=tatil(son);
+      if(tt.tam){
+        var ileri=son; while(tatil(ileri).tam) ileri=add(ileri,1);
+        var geri=son; while(tatil(geri).tam) geri=add(geri,-1);
+        adim.push('Son gün '+tt.ad+' olduğu için tatile denk geliyor. Sürenin izleyen ilk iş günü olan '+kisa(ileri)+' tarihine uzadığı görüşü yaygındır; ancak bu hak düşürücü bir süre olduğundan güvenli tarih olarak tatilden önceki son iş günü <b>'+kisa(geri)+'</b> esas alındı.');
+        son=geri;
+      }
+    } else {
+      for(var i=0;i<4;i++){
+        var degisti=false;
+        if(adliUygula && adliMi(son)){
+          var y=son.slice(0,4), ek=t.adli==='hmk'?7:3, yeni=add(y+'-08-31',ek);
+          adim.push('Son gün adli tatile (20 Temmuz - 31 Ağustos) rastlıyor; süre tatilin bittiği günden itibaren '+(t.adli==='hmk'?'bir hafta (HMK m.104)':'üç gün (CMK m.331/4)')+' uzayarak <b>'+kisa(yeni)+'</b> tarihine geçer.');
+          son=yeni; degisti=true;
+        }
+        var tt2=tatil(son);
+        if(tt2.tam){
+          var n=son; while(tatil(n).tam) n=add(n,1);
+          adim.push(kisa(son)+' günü tatil ('+tt2.ad+'); süre izleyen ilk iş günü olan <b>'+kisa(n)+'</b> tarihine uzar.');
+          son=n; degisti=true;
+        }
+        if(!degisti) break;
+      }
+    }
+    if(t.adli && $('istisna').checked && adliMi(ham)){ uyari.push('Adli tatil uzaması uygulanmadı.'); }
+
+    var tf=tatil(son);
+    if(tf.yarim){ uyari.push('<b>Dikkat:</b> Son gün '+tf.ad+' denk geliyor. Bu gün saat 13.00\'ten itibaren tatil olduğundan işleminizi o gün öğleden önce, en geç 12.00\'ye kadar yapın; sürenin ilk iş gününe uzadığına güvenmeyin.'); }
+    var yil=+son.slice(0,4);
+    if(yil>T.sonYil || +bas.slice(0,4)<T.ilkYil){ uyari.push('Tatil tablomuz '+T.ilkYil+'-'+T.sonYil+' yıllarındaki dini bayramları içerir; bu aralığın dışındaki tarihlerde bayramlar hesaba katılmamış olabilir.'); }
+
+    var bugun=new Date(), bIso=bugun.getFullYear()+'-'+String(bugun.getMonth()+1).padStart(2,'0')+'-'+String(bugun.getDate()).padStart(2,'0');
+    var kalan=Math.round((D(son)-D(bIso))/864e5), kalanTxt, kutu='';
+    if(kalan<0){ kalanTxt='Süre doldu'; uyari.push('Hesaplanan son gün geçmiş görünüyor. Tebliğin usulsüz olması veya elde olmayan bir sebeple süre kaçırılmışsa eski hale getirme gibi yollar bulunabilir; bunlar da kısa sürelere bağlıdır. Hemen bir avukata danışın.'); }
+    else if(kalan===0){ kalanTxt='Bugün son gün'; }
+    else { kalanTxt=kalan+' gün kaldı'; }
+
+    var h='<div class="big"><div class="main"><span>Son gün</span><b>'+fmt(son)+'</b></div><div><span>Durum</span><b>'+kalanTxt+'</b></div></div>';
+    h+='<ol style="font-size:15px;line-height:1.7;margin:0 0 14px 20px">'+adim.map(function(a){return '<li style="margin-bottom:6px">'+a+'</li>';}).join('')+'</ol>';
+    if(t.tatil!=='onceki' && son===ham) h+='<p style="font-size:15px">Son gün iş gününe denk geldiği için süre uzamaz.</p>';
+    uyari.forEach(function(u){h+='<div class="warn'+(/geçmiş|Dikkat/.test(u)?' red':'')+'">'+u+'</div>';});
+    h+='<p style="font-size:15px">'+t.ek+'</p><p style="font-size:13px;color:var(--muted)">Dayanak: '+t.dayanak+'. Süre, son günün mesai saati bitiminde sona erer.</p>';
+    var msg='Merhaba, desehukuk.com süre hesaplama aracını kullandım. '+t.ad+' için son gün: '+fmt(son)+'. Bu konuda görüşmek istiyorum.';
+    h+='<a class="send" href="https://wa.me/905064933573?text='+encodeURIComponent(msg)+'" target="_blank" rel="noopener">Bu sonuçla bize WhatsApp\'tan yazın</a>';
+    res.innerHTML=h;
+  });
+})();
+</script>
+</body>
+</html>
