@@ -4,13 +4,16 @@ import sys, os, html, json, subprocess
 sys.path.insert(0, os.path.dirname(__file__))
 from kararlar_icerik import KARARLAR
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "_uretim", "insta")
+STORY = "--story" in sys.argv
+args = [a for a in sys.argv[1:] if not a.startswith("--")]
+OUT = args[0] if args else os.path.join(ROOT, "_uretim", "insta")
+H = 1920 if STORY else 1350
 os.makedirs(OUT, exist_ok=True)
 e = html.escape
 
-CSS = """
+CSS0 = """
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{width:1080px;height:1350px}
+html,body{width:1080px;height:__H__px}
 body{font-family:Inter,sans-serif;background:#0a1830;color:#fff;overflow:hidden;position:relative}
 .ph{position:absolute;left:0;top:0;width:1080px;height:640px;background-size:cover;background-position:center}
 .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,24,48,.88) 0%,rgba(10,24,48,.5) 32%,rgba(10,24,48,.62) 62%,#0a1830 100%)}
@@ -35,10 +38,25 @@ h1{font-family:"Crimson Text",serif;font-weight:600;color:#fff;line-height:1.12;
 .alt b{color:#e3c48f;font-weight:600;letter-spacing:.02em}
 """
 
+STORY_CSS = """
+.ph{height:820px}
+.frame{inset:40px}
+.top{top:240px}
+.sec{top:560px;font-size:640px}
+.body{top:600px}
+.kart{bottom:610px}
+.alt{bottom:520px}
+.tap{position:absolute;left:84px;right:84px;bottom:270px;height:150px;border:2px dashed rgba(214,180,131,.55);border-radius:26px;display:flex;align-items:center;justify-content:center;gap:16px;font-size:26px;font-weight:600;color:#e3c48f;letter-spacing:.02em;background:rgba(214,180,131,.06)}
+.tapl{position:absolute;left:84px;right:84px;bottom:440px;text-align:center;font-size:26px;font-weight:600;color:#e3c48f}.tapl i{font-style:normal}
+"""
+
+CSS = CSS0.replace("__H__", str(H)) + (STORY_CSS if STORY else "")
+
 def fs(t):
     n = len(t)
     return 86 if n < 70 else 78 if n < 95 else 72 if n < 120 else 66 if n < 150 else 60
 
+TAP = '<div class="tapl"><i>↓</i> Kararın tamamı için bağlantıya dokunun</div><div class="tap"></div>' if STORY else ""
 for k in KARARLAR:
     kn = k['kunye']; mah = kn['mahkeme'].split(' (')[0]
     img = "file://" + os.path.join(ROOT, "assets", "img", k['img'])
@@ -47,15 +65,15 @@ for k in KARARLAR:
 <div class="top"><div class="wm"><b>DESE</b><small>HUKUK VE DANIŞMANLIK</small></div><div class="chip">KARAR BÜLTENİ</div></div>
 <div class="body"><div class="alan">{e(k['alan'])}</div><h1 style="font-size:{fs(k['baslik'])}px">{e(k['baslik']).replace('3. kişi','3.&nbsp;kişi')}</h1></div>
 <div class="kart"><div class="m">{e(mah)}</div><div class="g"><div><span>ESAS</span><strong>{kn['esas']}</strong></div><div><span>KARAR</span><strong>{kn['karar']}</strong></div><div><span>TARİH</span><strong>{kn['tarih']}</strong></div></div></div>
-<div class="alt"><span>Değerlendirmenin tamamı</span><b>desehukuk.com/kararlar</b></div>
+<div class="alt"><span>Değerlendirmenin tamamı</span><b>desehukuk.com/kararlar</b></div>{TAP}
 </body></html>"""
     hp = os.path.join(OUT, k['slug'] + ".html")
     open(hp, "w", encoding="utf-8").write(h)
 
-js = f"""const {{chromium}}=require('playwright');(async()=>{{const b=await chromium.launch();const p=await b.newPage({{viewport:{{width:1080,height:1350}}}});
+js = f"""const {{chromium}}=require('playwright');(async()=>{{const b=await chromium.launch();const p=await b.newPage({{viewport:{{width:1080,height:{H}}}}});
 for(const s of {json.dumps([k['yayin']+'_'+k['slug'] for k in KARARLAR])}){{const slug=s.slice(11);await p.goto('file://{OUT}/'+slug+'.html');await p.waitForTimeout(300);
 const ov=await p.evaluate(()=>{{const h=document.querySelector('h1').getBoundingClientRect(),k=document.querySelector('.kart').getBoundingClientRect();return k.top-h.bottom;}});
-console.log(slug,'bosluk',Math.round(ov));await p.screenshot({{path:'{OUT}/'+s+'.png'}});}}await b.close();}})();"""
+console.log(slug,'bosluk',Math.round(ov));await p.screenshot({{path:'{OUT}/'+s+('{"_story" if STORY else ""}')+'.png'}});}}await b.close();}})();"""
 open(os.path.join(OUT, "_render.js"), "w").write(js)
 subprocess.run(["node", os.path.join(OUT, "_render.js")], check=True)
 for k in KARARLAR: os.remove(os.path.join(OUT, k['slug'] + ".html"))
