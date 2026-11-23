@@ -44,5 +44,17 @@ window.DESE_VERI = {
       [800000, 16], [800000, 15], [1600000, 14], [1600000, 13], [2400000, 11],
       [3200000, 8], [4000000, 5], [4800000, 3], [5600000, 2], [Infinity, 1]
     ]
+  },
+
+  // İcra takibi açılış masrafları (2026)
+  // Harçlar: 492 sayılı Harçlar Kanunu (1) sayılı tarife; baro pulu: TBB duyurusu
+  // Tebligat tutarları: dosya başına borçlu sayısı kadar tebligat avansı
+  icraMasraf: {
+    yil: 2026,
+    basvurma: 732,        // icraya başvurma harcı (Tarife B-I-1)
+    pesinOran: 0.005,     // peşin harç, binde 5 (yalnız ilamsız takipte)
+    suret: 104,           // vekaletname suret harcı
+    pul: 164,             // vekalet (baro) pulu
+    tebligat: { normal: 300, hizli: 600, mts: 350, e: 20 }   // borçlu başına
   }
 };

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>İcra Masrafı Hesaplama 2026 (Harç, Peşin Harç, Tebligat) | DESE Hukuk</title>
+<meta name="description" content="İcra takibi açarken ödenecek masrafları 2026 tarifesiyle hesaplayın: icraya başvurma harcı, binde 5 peşin harç, vekaletname suret harcı, vekalet pulu ve borçlu sayısına göre tebligat gideri.">
+<link rel="canonical" href="https://desehukuk.com/araclar/icra-masrafi-hesaplama.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://desehukuk.com/araclar/icra-masrafi-hesaplama.html">
+<meta property="og:title" content="İcra Masrafı Hesaplama 2026">
+<meta property="og:description" content="İcra takibi açılış masraflarını kalem kalem hesaplayın.">
+<meta property="og:image" content="https://desehukuk.com/assets/img/tokmak-kitap.jpg">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="DESE Hukuk ve Danışmanlık">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/sayfa.css">
+<link rel="stylesheet" href="/assets/araclar.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"İcra Masrafı Hesaplama","url":"https://desehukuk.com/araclar/icra-masrafi-hesaplama.html","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"tr","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"publisher":{"@type":"LegalService","name":"DESE Hukuk ve Danışmanlık","url":"https://desehukuk.com/"}}</script>
+</head>
+<body>
+<header><div class="wrap">
+  <a href="/" class="logo" aria-label="DESE Hukuk ve Danışmanlık"><span class="wm"><b>DESE</b><small>Hukuk ve Danışmanlık</small></span></a>
+  <div class="hr"><a href="/araclar/" class="back">← Hesaplama araçları</a></div>
+</div></header>
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">İcra Hukuku · Hesaplama Aracı</div>
+  <h1>İcra Masrafı Hesaplama</h1>
+  <div class="meta" id="kunye"></div>
+</div></div>
+
+<main class="tool"><div class="wrap">
+
+<form class="calc" id="f" novalidate>
+  <div class="row">
+    <div class="f">
+      <label for="tur">Dosya türü</label>
+      <select id="tur">
+        <option value="ilamsiz">İlamsız takip</option>
+        <option value="ilamli">İlamlı takip</option>
+      </select>
+    </div>
+    <div class="f">
+      <label for="borclu">Borçlu sayısı</label>
+      <select id="borclu"></select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="f">
+      <label for="teb">Tebligat türü</label>
+      <select id="teb">
+        <option value="normal">Normal tebligat</option>
+        <option value="hizli">Hızlı tebligat</option>
+        <option value="mts">Merkezi Takip Sistemi (MTS)</option>
+        <option value="e">Elektronik tebligat (e-tebligat)</option>
+      </select>
+    </div>
+    <div class="f" id="tutarAlan">
+      <label for="tutar">Alacak tutarı (TL)</label>
+      <input type="text" id="tutar" inputmode="decimal" autocomplete="off" placeholder="Örn. 120.650,75">
+      <div class="hint">Peşin harç bu tutar üzerinden hesaplanır.</div>
+    </div>
+  </div>
+  <label class="chk"><input type="checkbox" id="vekil" checked> Takip avukat aracılığıyla açılacak</label>
+  <button type="submit">Hesapla</button>
+
+  <div class="res" id="res" aria-live="polite"></div>
+</form>
+
+<h2>İcra takibi açarken hangi masraflar ödenir?</h2>
+<p>Takip talebiyle birlikte bir kısım harç ve gider peşin olarak icra dairesine yatırılır. Bu ödemeler başlangıçta alacaklı tarafından karşılanır, ancak dosya borcuna eklenir ve takip sonunda borçludan tahsil edilir.</p>
+<ul>
+  <li><b>İcraya başvurma harcı:</b> Takibin türü ve tutarı ne olursa olsun dosya başına bir kez alınan maktu harçtır.</li>
+  <li><b>Peşin harç:</b> İlamsız takiplerde alacak tutarının binde 5'i oranında alınır. Bu tutar, ileride ödenecek tahsil harcından düşülür. İlamlı takiplerde peşin harç alınmaz.</li>
+  <li><b>Vekaletname suret harcı ve vekalet pulu:</b> Takip avukat aracılığıyla açılıyorsa ödenir. Alacaklı takibi kendisi açarsa bu iki kalem ödenmez.</li>
+  <li><b>Tebligat gideri:</b> Ödeme emrinin her borçluya tebliği için alınır; borçlu sayısı ve tebligat türüne göre değişir. Elektronik tebligat, fiziki tebligata göre çok daha düşük maliyetlidir.</li>
+</ul>
+<p>Takibin ilerleyen aşamalarında haciz, kıymet takdiri, satış ve muhafaza gibi işlemler için ayrıca masraf yatırılabilir. Borç tahsil edildiğinde de tahsil harcı ödenir. Bu araç yalnızca takip açılışındaki masrafları gösterir.</p>
+
+<div class="cta">İcra takibinizi başlatmak veya alacağınızın tahsili için bize ulaşın.<br><a href="https://wa.me/905064933573?text=Merhaba%2C%20icra%20takibi%20ba%C5%9Flatmak%20i%C3%A7in%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum." target="_blank" rel="noopener">WhatsApp ile yazın</a></div>
+
+<p class="disc">Hesaplama 2026 yılı harç tarifesine ve güncel vekalet pulu bedeline göre yapılır. Tebligat giderleri tahmini tutarlardır; icra dairesinin talep edeceği avans farklı olabilir. Bu araç genel bilgilendirme amaçlıdır ve hukuki mütalaa niteliği taşımaz.</p>
+
+</div></main>
+
+<footer><div class="wrap">
+  <span>© 2026 DESE Hukuk ve Danışmanlık · <a href="/">desehukuk.com</a> · <a href="/kvkk.html">KVKK Aydınlatma Metni</a> · <a href="/cerez-politikasi.html">Çerez Politikası</a></span>
+  <span>Hesaplama araçları genel bilgilendirme amaçlıdır; belirli bir uyuşmazlığa ilişkin hukuki mütalaa niteliği taşımaz ve avukat-müvekkil ilişkisi kurmaz.</span>
+</div></footer>
+<a class="wa" href="https://wa.me/905064933573?text=Merhaba%2C%20desehukuk.com%20%C3%BCzerinden%20ula%C5%9F%C4%B1yorum." target="_blank" rel="noopener" aria-label="WhatsApp ile yazın"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<script src="/assets/veri/oranlar.js"></script>
+<script>
+(function(){
+  var M = window.DESE_VERI.icraMasraf;
+  var tl = new Intl.NumberFormat('tr-TR',{style:'currency',currency:'TRY',minimumFractionDigits:2});
+  function $(id){return document.getElementById(id);}
+  function parse(s){
+    s = String(s||'').replace(/\s|TL|₺/gi,'');
+    if(!s) return NaN;
+    if(s.indexOf(',')>-1){ s = s.replace(/\./g,'').replace(',','.'); }
+    else if(/^\d{1,3}(\.\d{3})+$/.test(s)){ s = s.replace(/\./g,''); }
+    return parseFloat(s);
+  }
+  var TEB = {normal:'Normal tebligat',hizli:'Hızlı tebligat',mts:'MTS tebligatı',e:'Elektronik tebligat'};
+  $('kunye').textContent = M.yil+' tarifesi · Başvurma harcı, peşin harç, vekalet giderleri ve tebligat';
+  for(var i=1;i<=20;i++){ var o=document.createElement('option'); o.value=i; o.textContent=i; $('borclu').appendChild(o); }
+  function ayarla(){ $('tutarAlan').style.visibility = $('tur').value==='ilamli' ? 'hidden' : 'visible'; }
+  $('tur').addEventListener('change',ayarla); ayarla();
+
+  $('f').addEventListener('submit',function(e){
+    e.preventDefault();
+    var tur=$('tur').value, n=+$('borclu').value, teb=$('teb').value, vekil=$('vekil').checked, res=$('res'), tutar=0;
+    res.className='res on';
+    if(tur==='ilamsiz'){
+      tutar=parse($('tutar').value);
+      if(!(tutar>0)){ res.innerHTML='<div class="warn red">Lütfen geçerli bir alacak tutarı girin.</div>'; return; }
+    }
+    var k=[];
+    if(tur==='ilamsiz') k.push(['Peşin harç (binde 5)', Math.round(tutar*M.pesinOran*100)/100]);
+    k.push(['İcraya başvurma harcı', M.basvurma]);
+    if(vekil){ k.push(['Vekaletname suret harcı', M.suret]); k.push(['Vekalet (baro) pulu', M.pul]); }
+    k.push(['Tebligat gideri ('+n+' borçlu × '+TEB[teb]+')', M.tebligat[teb]*n]);
+    var top=k.reduce(function(a,b){return a+b[1];},0);
+    var vekilsiz = vekil ? top - M.suret - M.pul : null;
+    var h='<div class="big"><div class="main"><span>Toplam açılış masrafı</span><b>'+tl.format(top)+'</b></div>'
+      +(tutar?'<div><span>Alacak tutarı</span><b>'+tl.format(tutar)+'</b></div>':'')+'</div>';
+    h+='<div class="tbl-wrap"><table><thead><tr><th>Kalem</th><th class="n">Tutar</th></tr></thead><tbody>';
+    k.forEach(function(r){ h+='<tr><td>'+r[0]+'</td><td class="n">'+tl.format(r[1])+'</td></tr>'; });
+    h+='<tr><th>Toplam</th><th class="n">'+tl.format(top)+'</th></tr></tbody></table></div>';
+    if(vekilsiz!==null) h+='<p style="font-size:15px">Takibi avukat olmadan kendiniz açarsanız vekaletname suret harcı ve vekalet pulu ödenmez; bu durumda toplam masraf '+tl.format(vekilsiz)+' olur.</p>';
+    if(tur==='ilamli') h+='<p style="font-size:15px">İlamlı takiplerde peşin harç alınmaz.</p>';
+    var msg='Merhaba, desehukuk.com icra masrafı aracını kullandım. '+(tur==='ilamsiz'?'İlamsız takip, alacak: '+tl.format(tutar):'İlamlı takip')+', '+n+' borçlu, tahmini açılış masrafı: '+tl.format(top)+'. İcra takibi başlatmak için görüşmek istiyorum.';
+    h+='<a class="send" href="https://wa.me/905064933573?text='+encodeURIComponent(msg)+'" target="_blank" rel="noopener">Bu sonuçla bize WhatsApp\'tan yazın</a>';
+    res.innerHTML=h;
+  });
+})();
+</script>
+</body>
+</html>
