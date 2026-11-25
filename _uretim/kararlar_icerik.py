@@ -151,7 +151,7 @@ KARARLAR = [
  "slug": "uyusturucu-telefon-gorusmesi-tek-basina-delil-degil",
  "alan": "Ceza Hukuku",
  "img": "ceza.jpg",
- "yayin": "2026-12-04",
+ "yayin": "2026-11-25",
  "baslik": "Uyuşturucu ticareti şeklinde atılı suçu oluşturan yargılamalarda, yalnızca telefon görüşmelerine dayanılarak mahkûmiyet kurulamaz.",
  "aciklama": "Yargıtay 10. Ceza Dairesi: Maddi bulgularla desteklenmeyen telefon görüşmeleri, uyuşturucu ticareti suçunda tek başına mahkûmiyet için yeterli değildir.",
  "kunye": {"mahkeme": "Yargıtay 10. Ceza Dairesi", "esas": "2025/1455", "karar": "2025/10287", "tarih": "21.10.2025", "sonuc": "Bir kısım sanıklar yönünden oy birliğiyle bozma", "id": "1181059400"},
